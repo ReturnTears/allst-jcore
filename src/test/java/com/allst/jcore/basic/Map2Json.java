@@ -8,19 +8,19 @@ import java.util.Map;
 
 /**
  * url : http://smssh1.253.com/msg/send/json
- * account : N4205321
- * password : pL8tu46SI
+ * account : xxx
+ * password : xxx
  * @author June 2019/03/13 下午 03:07
  * @version 1.0
  */
 public class Map2Json {
     public static final String charset = "utf-8";
     // 请登录zz.253.com 获取创蓝API账号(非登录账号,示例:N1234567)
-    public static String account = "N4205321";
+    public static String account = "xxxx";
     // 请登录zz.253.com 获取创蓝API密码(非登录密码)
-    public static String password = "pL8tu46SI";
+    public static String password = "xxxx";
     //
-    public static String params = "15023424015,THJ_01,19";
+    public static String params = "150212324015,THJ_01,19";
     //
     public static String sendtime = "201704101400";
     public static String extend = "555";
@@ -33,7 +33,7 @@ public class Map2Json {
         // 设置您要发送的内容：其中“【】”中括号为运营商签名符号，多签名内容前置添加提交
         String msg = "{$var}号梁将于{$var} 台座进行砼浇筑，请及时进行工作准备";
         //手机号码
-        String phone = "15023424015";
+        String phone = "15023124015";
         //状态报告
         String report= "true";
 
