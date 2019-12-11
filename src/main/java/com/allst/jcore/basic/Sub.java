@@ -17,6 +17,7 @@ public class Sub extends Fat {
         System.out.println(fat.getLength().toString() + " , " + sub.getLength().toString());
     }
 
+    @Override
     public Integer getLength() {
         return new Integer(5);
     }
