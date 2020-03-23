@@ -57,6 +57,10 @@ public class FilterApple {
      */
     public interface AppleFilter {
         boolean filter(Apple apple);
+
+        default void print(String var) {
+            System.out.println(var);
+        }
     }
 
     public static  List<Apple> findApple(List<Apple> apples, AppleFilter appleFilter) {
@@ -72,8 +76,27 @@ public class FilterApple {
     }
 
 
+    public static class GreenAnd200WeightFilter implements AppleFilter {
+
+        @Override
+        public boolean filter(Apple apple) {
+            return ("green".equals(apple.getColor()) && apple.getWeight() >= 200);
+        }
+    }
+
+    public static class yellowLess300WeightFilter implements AppleFilter {
+
+        @Override
+        public boolean filter(Apple apple) {
+            return ("yellow".equals(apple.getColor()) && apple.getWeight() < 300);
+        }
+    }
+
+
+
+
     public static void main(String[] args) {
-        List<Apple> list = Arrays.asList(new Apple("green", 150), new Apple("green", 190),
+        List<Apple> list = Arrays.asList(new Apple("green", 250), new Apple("green", 190),
                 new Apple("red", 220), new Apple("yellow", 230));
         /*List<Apple> greenApples = findGreenApple(list);
         // 断言
@@ -86,6 +109,22 @@ public class FilterApple {
         List<Apple> redApples = findApple(list, "red");
         System.out.println(redApples);
 
+        List<Apple> result = findApple(list, new GreenAnd200WeightFilter());
+        System.out.println(result);
+        // 匿名内部类的方式
+        List<Apple> yellowList = findApple(list, new AppleFilter() {
+            @Override
+            public boolean filter(Apple apple) {
+                return "yellow".equals(apple.getColor());
+            }
+        });
+
+        System.out.println(yellowList);
+
+
+        // 使用简单lambda表达式, 一个参数的时候JVM会进行参数的类型推导
+        List<Apple> lambdaResult = findApple(list, apple -> "green".equals(apple.getColor()));
+        System.out.println(lambdaResult);
     }
 
 }

@@ -39,6 +39,26 @@ spring.datasource.password=123456
 
 🍎 Java 8 基础部分
 
+JVM 相关命令:
 
+java -version 查看安装的Java版本
+ 
+jps -l 查看Java程序运行进程ID
+
+jstat -gcutil processId 1000 10 查看进程id为processId的Java程序, 运行1000ms , 运行10次的内存情况
+内存运行情况如下:
+C:\Users\June>jstat -gcutil 12052 1000 4
+  S0     S1     E      O      M     CCS    YGC     YGCT    FGC    FGCT     GCT
+ 90.29   0.00  38.15   0.18  97.68  94.65      2    0.023     0    0.000    0.023
+ 90.29   0.00  38.15   0.18  97.68  94.65      2    0.023     0    0.000    0.023
+ 90.29   0.00  38.15   0.18  97.68  94.65      2    0.023     0    0.000    0.023
+ 90.29   0.00  38.15   0.18  97.68  94.65      2    0.023     0    0.000    0.023
+
+🍎 Java 8 Lamdba表达式
+
+Java 8 lambda表达式比较节省内存空间~~~
+查看lambda表达式编译为字节码文件后和匿名内部类的区别
+
+@FunctionInterface
 
 ```
