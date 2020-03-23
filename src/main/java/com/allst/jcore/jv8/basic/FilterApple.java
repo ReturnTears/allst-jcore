@@ -48,6 +48,30 @@ public class FilterApple {
         return list;
     }
 
+    /*
+     * 参数的变化代表需求的变化
+     * 如果我们又想在颜色的基础上添加重量的需求呢? ? ?
+     *
+     * 使用策略模式
+     *
+     */
+    public interface AppleFilter {
+        boolean filter(Apple apple);
+    }
+
+    public static  List<Apple> findApple(List<Apple> apples, AppleFilter appleFilter) {
+        List<Apple> list = new ArrayList<>();
+
+        for (Apple apple : apples) {
+            if (appleFilter.filter(apple)) {
+                list.add(apple);
+            }
+        }
+
+        return list;
+    }
+
+
     public static void main(String[] args) {
         List<Apple> list = Arrays.asList(new Apple("green", 150), new Apple("green", 190),
                 new Apple("red", 220), new Apple("yellow", 230));
