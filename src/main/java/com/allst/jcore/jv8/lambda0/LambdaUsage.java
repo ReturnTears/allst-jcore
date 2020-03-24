@@ -5,6 +5,7 @@ import com.allst.jcore.jv8.basic.Apple;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.function.LongPredicate;
 import java.util.function.Predicate;
 
 /**
@@ -34,6 +35,9 @@ public class LambdaUsage {
         List<Apple> applesResult = filter(appleList, (apple) -> "red".equals(apple.getColor()));
         System.out.println(applesResult);
 
+        List<Apple> apples = filterAppleByWeight(appleList, w -> w > 200);
+        System.out.println(apples);
+
     }
 
     private static void process(Runnable r) {
@@ -45,6 +49,16 @@ public class LambdaUsage {
         List<Apple> list = new ArrayList<>();
         for (Apple apple : resoure) {
             if (predicate.test(apple)) {
+                list.add(apple);
+            }
+        }
+        return list;
+    }
+
+    private static List<Apple> filterAppleByWeight(List<Apple> resoure, LongPredicate predicate) {
+        List<Apple> list = new ArrayList<>();
+        for (Apple apple : resoure) {
+            if (predicate.test(apple.getWeight())) {
                 list.add(apple);
             }
         }
