@@ -61,4 +61,54 @@ Java 8 lambda表达式比较节省内存空间~~~
 
 @FunctionInterface
 
+🍓 lambda表达式的语法
+   可以把Lambda表达式理解为简洁地表示可传递的匿名函数的一种方式：它没有名称，但它有参数列表、函数主体、返回类型，可能还有一个可以抛出的异常列表
+   lambda表达式的组成:
+   (o1, o2) -> o1.getColor().compareTo(o2.getColor())
+   参数列表  arrow  lambda body
+   (parameters) -> expression
+   (parameters) -> {statments;}
+   () -> {}
+   
+   
+   
+🍓 如何使用lambda表达式
+🍓 execute around pattern
+🍓 Function Interface
+🍓 Method references
+🍓 Type interface
+🍓 composing lambdas
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 ```
