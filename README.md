@@ -76,6 +76,10 @@ Java 8 lambda表达式比较节省内存空间~~~
 🍓 execute around pattern
 🍓 Function Interface
 🍓 Method references
+   方法引用
+   
+   
+   
 🍓 Type interface
 🍓 composing lambdas
 
