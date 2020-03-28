@@ -112,7 +112,7 @@ public class CreateStream {
         private int id;
         private String name;
 
-        public Obj(int id, String name) {
+        private Obj(int id, String name) {
             this.id = id;
             this.name = name;
         }
