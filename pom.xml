@@ -24,7 +24,7 @@
             <version>4.12</version>
             <scope>test</scope>
         </dependency>
-        <!--<dependency>
+        <dependency>
             <groupId>org.apache.commons</groupId>
             <artifactId>commons-lang3</artifactId>
             <version>3.8.1</version>
@@ -34,6 +34,7 @@
             <artifactId>fastjson</artifactId>
             <version>1.2.47</version>
         </dependency>
+
         <dependency>
             <groupId>javax.servlet</groupId>
             <artifactId>servlet-api</artifactId>
@@ -55,7 +56,7 @@
             <artifactId>javaee-api</artifactId>
             <version>7.0</version>
             <scope>provided</scope>
-        </dependency>-->
+        </dependency>
 
         <!-- websocket client -->
         <!--<dependency>-->
