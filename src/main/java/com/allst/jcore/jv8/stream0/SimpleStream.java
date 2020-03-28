@@ -30,8 +30,10 @@ public class SimpleStream {
         /*List<String> dishNamesByStream = getDishNamesByStream(menu);
         System.out.println(dishNamesByStream);*/
 
-        List<String> dishNamesByParallelStream = getDishNamesByParallelStream(menu);
-        System.out.println(dishNamesByParallelStream);
+        /*List<String> dishNamesByParallelStream = getDishNamesByParallelStream(menu);
+        System.out.println(dishNamesByParallelStream);*/
+
+
     }
 
     /* 传统方式 */
