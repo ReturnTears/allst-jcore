@@ -14,8 +14,13 @@ public class NullPointerExecption {
         System.out.println(result);
     }
 
+    /**
+     * 使用OptionalInAction中的方法就不用使用如下方法的深度判断了~~~
+     * @param person
+     * @return
+     */
     private static String getInsuranceNameByDeepdoubts(Person person) {
-        if (null != person) {
+        /*if (null != person) {
             Car car = person.getCar();
             if (null != car) {
                 Insurance insurance = car.getInsurance();
@@ -23,12 +28,13 @@ public class NullPointerExecption {
                     return insurance.getName();
                 }
             }
-        }
+        }*/
         return "UNKNOWN~~~";
     }
 
 
     private static String getInsuranceName(Person person) {
-        return person.getCar().getInsurance().getName();
+        // return person.getCar().getInsurance().getName();
+        return "";
     }
 }
