@@ -42,6 +42,8 @@ public class CollectorsAction {
         testGroupingByFunctionAndCollector();
 
         testGroupingByFunctionAndSupplierAndCollector();
+
+        testSummarizingInt();
     }
 
     /**
@@ -105,5 +107,11 @@ public class CollectorsAction {
 
         Optional.of(map.getClass()).ifPresent(System.out::println);
         Optional.of(map).ifPresent(System.out::println);
+    }
+
+    private static void testSummarizingInt() {
+        System.out.println("🍎🍎🍎🍎🍎🍎🍎🍎🍎🍎🍎🍎🍎🍎");
+        IntSummaryStatistics result = list.stream().collect(Collectors.summarizingInt(Dish::getCalories));
+        Optional.of(result).ifPresent(System.out::println);
     }
 }
