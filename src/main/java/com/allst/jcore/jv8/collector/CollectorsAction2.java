@@ -2,6 +2,7 @@ package com.allst.jcore.jv8.collector;
 
 import com.allst.jcore.jv8.stream0.Dish;
 
+import java.util.Comparator;
 import java.util.List;
 import java.util.Optional;
 import java.util.concurrent.ConcurrentMap;
@@ -29,6 +30,12 @@ public class CollectorsAction2 {
         testJoiningWithDelimiter();
 
         testJoiningWithDelimiterAndPrefixAndSuffix();
+
+        testMapping();
+
+        testMaxby();
+
+        testMinby();
     }
 
     private static void testGroupingByConcurrentWithFunction() {
@@ -75,6 +82,24 @@ public class CollectorsAction2 {
     private static void testJoiningWithDelimiterAndPrefixAndSuffix() {
         System.out.println("🍎🍎🍎🍎🍎🍎🍎🍎🍎🍎🍎🍎🍎");
         Optional.of(list.stream().map(Dish::getName).collect(Collectors.joining(",", "Namw[", "]")))
+                .ifPresent(System.out::println);
+    }
+
+    private static void testMapping() {
+        System.out.println("🍎🍎🍎🍎🍎🍎🍎🍎🍎🍎🍎🍎🍎");
+        Optional.of(list.stream().collect(Collectors.mapping(Dish::getName, Collectors.joining(","))))
+                .ifPresent(System.out::println);
+    }
+
+    private static void testMaxby() {
+        System.out.println("🍎🍎🍎🍎🍎🍎🍎🍎🍎🍎🍎🍎🍎");
+        list.stream().collect(Collectors.maxBy(Comparator.comparingInt(Dish::getCalories)))
+                .ifPresent(System.out::println);
+    }
+
+    private static void testMinby() {
+        System.out.println("🍎🍎🍎🍎🍎🍎🍎🍎🍎🍎🍎🍎🍎");
+        list.stream().collect(Collectors.minBy(Comparator.comparingInt(Dish::getCalories)))
                 .ifPresent(System.out::println);
     }
 }
