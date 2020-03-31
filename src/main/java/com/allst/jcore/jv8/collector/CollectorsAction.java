@@ -11,7 +11,7 @@ import java.util.stream.Collectors;
  */
 public class CollectorsAction {
 
-    private final static List<Dish>  list = Arrays.asList(
+    public final static List<Dish>  list = Arrays.asList(
             new Dish("season fruit", true, 120, Dish.Type.OTHER),
             new Dish("pizza", true, 550, Dish.Type.OTHER),
             new Dish("prawns", false, 300, Dish.Type.FISH),
