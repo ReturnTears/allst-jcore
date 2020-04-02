@@ -1,4 +1,4 @@
-package com.allst.jcore.jv8.parallel;
+package com.allst.jcore.jv8.parallel0;
 
 import java.util.function.Function;
 import java.util.stream.LongStream;
