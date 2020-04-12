@@ -27,7 +27,7 @@ public class CompletableFutureInAction {
         // Optional.ofNullable(completableFuture.get()).ifPresent(System.out::println);
     }
 
-    private static double get() {
+    static double get() {
         try {
             Thread.sleep(1000L);
         } catch (InterruptedException e) {
