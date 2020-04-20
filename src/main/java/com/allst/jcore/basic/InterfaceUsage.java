@@ -65,3 +65,17 @@ class PaperKite extends Kite {
         System.out.println("...PaperKite attrack...");
     }
 }
+
+/**
+ * 接口与接口之间可以多继承
+ */
+interface  A {
+    void mth1();
+}
+
+interface B {
+    void mth2();
+}
+interface C extends A, B {
+
+}
