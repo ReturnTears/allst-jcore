@@ -151,13 +151,75 @@ Java 8并行
 
 
 
+### Java Virtual Machine
+```text
+第一章：JVM的基本介绍
+JVM
+Graal VM
+
+第二章：类加载子系统
+Class Files 
+>>
+Class Loader SubSystem (
+    loading (bootstrap classloader > extension classloader > application classloader)
+    > linking (verify > prepare > resolve)
+    > initialization (initialization)
+)
+>>
+Runtime Data Area (
+    Method Area 
+    Heap Area
+    Stack Area
+    PC Registers
+    Native Method Stack
+)
+>>
+Execution Engine
 
 
 
 
-
-
-
-
+类加载子系统作用：
+1、类加载器子系统负责从文件系统或者网络中加载Class文件，Class文件在文件开头有特定的文件标识。
+2、ClassLoader只负责class文件的加载，至于它是否可以运行，则由Execution Engine决定
+3、加载的类信息存在于一块称为方法去的内存空间。除了类的信息外，方法区中还会存放运行时常量池信息，可能还包括字符串字面量和数字常量
+类加载器Classloader角色：
+1、class file存在于本地磁盘上， 可以理解为设计师的画在纸上的模板，最终这个模板在执行的时候要加载到JVM中，JVM根据这个文件实例化出n个一模一样的实例
+2、class file加载到JVM中， 称为DNA元数据模板，放在方法区
+3、在.class文件 -> JVM -> 最终成为元数据模板，此过程就要一个运转工具（类装载器class loader），扮演一个快递员的角色。
+类的加载过程：
+加载Loading：
+1、通过一个类的全限定名获取定义此类的二进制字节流
+2、将这个字节流所代表的静态存储结构转化为方法区的运行时数据结构
+3、在内存中生成一个代表这个类的java.lang.Class对象，作为方法区这个类的各种数据的访问入口
+补充：加载.class文件的方式
+1、从本地系统中直接加载
+2、通过网络获取，典型场景：Web Applet
+3、从zip压缩包中读取，成为日后jar, war格式的基础
+4、运行时计算生成，使用最多的是：动态代理技术
+5、由其他文件生成，典型场景：JSP应用
+6、从专有数据库中提取.class文件，比较少见
+7、从加密文件中获取，典型的防Class文件被反编译的保护措施
+连接Linking
+验证（Verify）:
+1、目的在于去报class文件的字节流中包含信息符合当前虚拟机要求，，保证被加载类的正确性，不会危及虚拟机自身安全
+2、主要包括四种验证：文件格式验证（.class文件的开头是CA FA BA BY）、元数据验证、字节码验证、符号引用验证。
+准备（Prepare）：
+1、为类变量分配内存并且设置该类的默认初始值，即零值。这个阶段的类变量会设置为默认值，initialization阶段才会赋值
+2、这里不包括final 修饰的static，因为final在编译的时候就会分配了，准备阶段会显式初始化
+3、这里不会为实例变量分配初始化，类变量会分配在方法区中，而实例变量是会随着对象一起分配到Java堆中
+解析（Resolve）：
+将常量池内的符号引用转换为直接引用的过程，直接引用就是直接指向目标的指针，相对偏移量或一个间接定位到目标的句柄。
+事实上，解析操作往往会伴随着JVM在执行完初始化之后再执行。
+解析动作主要针对类或接口、字段、类方法、接口方法，方法类型等。对应常量池中的：
+CONSTANT_Class_info、CONSTANT——Fieldref_info、CONSTANT_Methodref_info
+初始化Initialization
+初始化：
+1、初始化阶段就是执行类构造器方法<client>()的过程
+2、此方法不需要定义，是javac编译器自动收集类中的所有类变量的赋值动作和静态代码块中的语句合并而来的
+3、构造器方法中指令按语句再源文件中出现的顺序执行
+4、<client>()不同于类的构造器。（关联：构造器是虚拟机视觉下的<init>()）
+5、若该类具有父类，JVM会保证子类的<client>()执行前，父类的<client>()已经执行完毕
+6、虚拟机必须保证一个类的<client>()方法在多线程下被同步加锁
 
 ```
