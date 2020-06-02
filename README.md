@@ -149,7 +149,7 @@ jconsole命令调用Java自带的工具查看线程运行情况
 Java 8并行
 
 
-
+```
 
 ### Java Virtual Machine
 ```text
@@ -221,5 +221,34 @@ CONSTANT_Class_info、CONSTANT——Fieldref_info、CONSTANT_Methodref_info
 4、<client>()不同于类的构造器。（关联：构造器是虚拟机视觉下的<init>()）
 5、若该类具有父类，JVM会保证子类的<client>()执行前，父类的<client>()已经执行完毕
 6、虚拟机必须保证一个类的<client>()方法在多线程下被同步加锁
+类加载器分类
+JVM支持两种类型的类加载器，分别为引导类加载器（Bootstrap ClassLoader）和自定义类加载器（User-Defined ClassLoader）
+在Java虚拟机规范中定义，将所有派生于抽象类ClassLoader的类加载都划分为自定义类加载器
+虚拟机自带的加载器：启动类加载器（又称引导类加载器, bootstrap classloader）
+1、这个类加载使用C/C++语言实现的，嵌套在JVM内部
+2、它用来加载JAVA的核心类库（JAVA_HOME/jre/lib/rt.jar、resource.jar、sun.boot.class.path路径下的内容），用于提供JVM自身需要的类
+3、并不继承自Java.lang.ClassLoader,没有父加载器
+4、加载扩展类和应用类加载器，并指定为他们的父类加载器
+5、出于安全考虑，Bootstrap启动类加载器只加载包含包名为java,javax,sun开头的类
+扩展类加载器（Extension Classloader）
+1、java语言编写的，
+2、派生于Classloader类
+3、父类加载器为启动类加载器
+4、从java.ext.dirs系统属性所指的目录中加载类库，或从JDK的安装目录的jre/lib/ext子目录下加载类库，如果用户创建的JAR放在此目录下，也会自动由扩展类加载器加载
+应用程序类加载器（系统类加载器， AppClassLoader）
+1、同上1、2
+2、它负责加载环境变量classpath或系统属性java.class.path指定路径下的类库
+3、该类加载是程序中默认的类加载器，一般来说，Java应用的类都是由它来完成加载的
+4、通过ClassLoader#getSystemClassLoader()方法可以获取该类加载器
+用户自定义类加载器
+为什么需要自定义类加载器？
+>隔离加载类
+>修改类加载的方式
+>扩展加载源
+>防止源码泄露
+自定义累加器实现步骤：
+1、开发人员可以通过继承抽象类java.lang.ClassLoader类的方式实现自己的类加载器，以满足特殊需求
+2、在JDK1.2之前，在自定义类加载器时，总会去继承ClassLoader类并重写loadClass()方法,从而实现自定义的类加载类，但是在JDK1.2之后，已不再建议用户去覆盖loadClass()方法，而是建议把自定义的类加载逻辑写在findClass()方法中。
+3、在编写自定义类加载器时， 如果没有太过于复杂的需求，可以直接继承URLClassLoader类，这样就可以避免自己去编写findClass()方法及其获取字节码流的方式，使自定义类加载器编写更加简洁。
 
 ```
