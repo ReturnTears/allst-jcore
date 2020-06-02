@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a48103bc-3033-486e-9694-fcaa31a9b740" name="Default" comment="JVM 类加载子系统">
+    <list default="true" id="a48103bc-3033-486e-9694-fcaa31a9b740" name="Default" comment="JVM 类加载子系统-双亲委派机制">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
@@ -22,8 +22,8 @@
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="FIRST">
-              <first_editor relative-caret-position="355">
-                <caret line="253" column="6" lean-forward="true" selection-start-line="253" selection-start-column="6" selection-end-line="253" selection-end-column="6" />
+              <first_editor relative-caret-position="490">
+                <caret line="264" column="6" selection-start-line="264" selection-start-column="6" selection-end-line="264" selection-end-column="6" />
               </first_editor>
               <second_editor />
             </state>
@@ -99,8 +99,8 @@
     <option name="jreName" value="#JAVA_HOME" />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="631" />
-    <option name="y" value="27" />
+    <option name="x" value="288" />
+    <option name="y" value="5" />
     <option name="width" value="1430" />
     <option name="height" value="1048" />
   </component>
@@ -470,14 +470,7 @@
       <workItem from="1588869121111" duration="29000" />
       <workItem from="1591014499621" duration="7788000" />
       <workItem from="1591023572040" duration="1110000" />
-      <workItem from="1591108156251" duration="5196000" />
-    </task>
-    <task id="LOCAL-00009" summary="Java复习之高级部分(basic)">
-      <created>1584979143490</created>
-      <option name="number" value="00009" />
-      <option name="presentableId" value="LOCAL-00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1584979143490</updated>
+      <workItem from="1591108156251" duration="5633000" />
     </task>
     <task id="LOCAL-00010" summary="Java复习之高级部分(basic &amp; lambda)">
       <created>1584982981090</created>
@@ -815,11 +808,18 @@
       <option name="project" value="LOCAL" />
       <updated>1591111933203</updated>
     </task>
-    <option name="localTasksCounter" value="58" />
+    <task id="LOCAL-00058" summary="JVM 类加载子系统-双亲委派机制">
+      <created>1591113413419</created>
+      <option name="number" value="00058" />
+      <option name="presentableId" value="LOCAL-00058" />
+      <option name="project" value="LOCAL" />
+      <updated>1591113413419</updated>
+    </task>
+    <option name="localTasksCounter" value="59" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="14094000" />
+    <option name="totallyTimeSpent" value="14531000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -831,7 +831,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="635" y="23" width="1144" height="838" extended-state="0" />
+    <frame x="830" y="0" width="1144" height="838" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" weight="0.2555147" />
@@ -849,7 +849,7 @@
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Terminal" order="7" />
       <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" weight="0.32884097" />
+      <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" weight="0.32763532" />
       <window_info anchor="bottom" id="Messages" order="10" />
       <window_info anchor="bottom" id="Java Enterprise" order="11" />
       <window_info anchor="bottom" id="Database Changes" order="12" />
@@ -913,7 +913,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_CLEANUP_BEFORE_PROJECT_COMMIT" value="true" />
-    <MESSAGE value="Java复习之高级部分(lambda expression usage)" />
     <MESSAGE value="Java复习之高级部分(method reference)" />
     <MESSAGE value="Java复习之高级部分(Stream)" />
     <MESSAGE value="Java复习之高级部分(Stream | ParallelStream)" />
@@ -938,7 +937,8 @@
     <MESSAGE value="Date" />
     <MESSAGE value="Java 基础" />
     <MESSAGE value="JVM 类加载子系统" />
-    <option name="LAST_COMMIT_MESSAGE" value="JVM 类加载子系统" />
+    <MESSAGE value="JVM 类加载子系统-双亲委派机制" />
+    <option name="LAST_COMMIT_MESSAGE" value="JVM 类加载子系统-双亲委派机制" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
@@ -992,8 +992,8 @@
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="FIRST">
-          <first_editor relative-caret-position="355">
-            <caret line="253" column="6" lean-forward="true" selection-start-line="253" selection-start-column="6" selection-end-line="253" selection-end-column="6" />
+          <first_editor relative-caret-position="490">
+            <caret line="264" column="6" selection-start-line="264" selection-start-column="6" selection-end-line="264" selection-end-column="6" />
           </first_editor>
           <second_editor />
         </state>
