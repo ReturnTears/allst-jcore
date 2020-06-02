@@ -2,8 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a48103bc-3033-486e-9694-fcaa31a9b740" name="Default" comment="JVM 类加载子系统">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/allst/jcore/jvm/ClassLoaderTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/allst/jcore/jvm/ClassLoaderTest2.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
@@ -24,8 +22,8 @@
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="FIRST">
-              <first_editor relative-caret-position="328">
-                <caret line="252" lean-forward="true" selection-start-line="252" selection-end-line="252" />
+              <first_editor relative-caret-position="355">
+                <caret line="253" column="6" lean-forward="true" selection-start-line="253" selection-start-column="6" selection-end-line="253" selection-end-column="6" />
               </first_editor>
               <second_editor />
             </state>
@@ -101,8 +99,8 @@
     <option name="jreName" value="#JAVA_HOME" />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="537" />
-    <option name="y" value="13" />
+    <option name="x" value="631" />
+    <option name="y" value="27" />
     <option name="width" value="1430" />
     <option name="height" value="1048" />
   </component>
@@ -472,14 +470,7 @@
       <workItem from="1588869121111" duration="29000" />
       <workItem from="1591014499621" duration="7788000" />
       <workItem from="1591023572040" duration="1110000" />
-      <workItem from="1591108156251" duration="3726000" />
-    </task>
-    <task id="LOCAL-00008" summary="Java复习之高级部分(basic)">
-      <created>1584978624732</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1584978624732</updated>
+      <workItem from="1591108156251" duration="5196000" />
     </task>
     <task id="LOCAL-00009" summary="Java复习之高级部分(basic)">
       <created>1584979143490</created>
@@ -817,11 +808,18 @@
       <option name="project" value="LOCAL" />
       <updated>1591024256640</updated>
     </task>
-    <option name="localTasksCounter" value="57" />
+    <task id="LOCAL-00057" summary="JVM 类加载子系统">
+      <created>1591111933198</created>
+      <option name="number" value="00057" />
+      <option name="presentableId" value="LOCAL-00057" />
+      <option name="project" value="LOCAL" />
+      <updated>1591111933203</updated>
+    </task>
+    <option name="localTasksCounter" value="58" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="12624000" />
+    <option name="totallyTimeSpent" value="14094000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -833,7 +831,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="418" y="78" width="1144" height="838" extended-state="0" />
+    <frame x="635" y="23" width="1144" height="838" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" weight="0.2555147" />
@@ -844,7 +842,7 @@
       <window_info id="Designer" order="5" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32763532" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32763532" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -994,8 +992,8 @@
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="FIRST">
-          <first_editor relative-caret-position="328">
-            <caret line="252" lean-forward="true" selection-start-line="252" selection-end-line="252" />
+          <first_editor relative-caret-position="355">
+            <caret line="253" column="6" lean-forward="true" selection-start-line="253" selection-start-column="6" selection-end-line="253" selection-end-column="6" />
           </first_editor>
           <second_editor />
         </state>
