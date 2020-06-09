@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a48103bc-3033-486e-9694-fcaa31a9b740" name="Default" comment="JVM 类加载子系统-双亲委派机制">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/allst/jcore/jvm/SandboxSafety.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/java/lang/Sandbox.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/java/lang/String.java" afterDir="false" />
+    <list default="true" id="a48103bc-3033-486e-9694-fcaa31a9b740" name="Default" comment="JVM 运行时数据区">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
@@ -25,8 +22,8 @@
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="FIRST">
-              <first_editor relative-caret-position="438">
-                <caret line="283" column="32" selection-start-line="283" selection-start-column="32" selection-end-line="283" selection-end-column="32" />
+              <first_editor relative-caret-position="495">
+                <caret line="325" column="3" lean-forward="true" selection-start-line="325" selection-start-column="3" selection-end-line="325" selection-end-column="3" />
               </first_editor>
               <second_editor />
             </state>
@@ -97,9 +94,9 @@
   <component name="MavenRunner">
     <option name="jreName" value="#JAVA_HOME" />
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="1070" />
-    <option name="y" value="31" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="413" />
+    <option name="y" value="12" />
     <option name="width" value="1430" />
     <option name="height" value="1050" />
   </component>
@@ -446,21 +443,7 @@
       <workItem from="1591279707248" duration="620000" />
       <workItem from="1591545205842" duration="67000" />
       <workItem from="1591548736601" duration="631000" />
-      <workItem from="1591709705332" duration="1842000" />
-    </task>
-    <task id="LOCAL-00011" summary="Java复习之高级部分(lambda expression)">
-      <created>1585062209046</created>
-      <option name="number" value="00011" />
-      <option name="presentableId" value="LOCAL-00011" />
-      <option name="project" value="LOCAL" />
-      <updated>1585062209047</updated>
-    </task>
-    <task id="LOCAL-00012" summary="Java复习之高级部分(lambda expression usage)">
-      <created>1585064416321</created>
-      <option name="number" value="00012" />
-      <option name="presentableId" value="LOCAL-00012" />
-      <option name="project" value="LOCAL" />
-      <updated>1585064416321</updated>
+      <workItem from="1591709705332" duration="5802000" />
     </task>
     <task id="LOCAL-00013" summary="Java复习之高级部分(lambda expression usage)">
       <created>1585065135640</created>
@@ -791,11 +774,25 @@
       <option name="project" value="LOCAL" />
       <updated>1591113821921</updated>
     </task>
-    <option name="localTasksCounter" value="60" />
+    <task id="LOCAL-00060" summary="JVM 沙箱机制 类主动使用和被动使用">
+      <created>1591711745285</created>
+      <option name="number" value="00060" />
+      <option name="presentableId" value="LOCAL-00060" />
+      <option name="project" value="LOCAL" />
+      <updated>1591711745285</updated>
+    </task>
+    <task id="LOCAL-00061" summary="JVM 运行时数据区">
+      <created>1591714423330</created>
+      <option name="number" value="00061" />
+      <option name="presentableId" value="LOCAL-00061" />
+      <option name="project" value="LOCAL" />
+      <updated>1591714423330</updated>
+    </task>
+    <option name="localTasksCounter" value="62" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="17722000" />
+    <option name="totallyTimeSpent" value="21682000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -807,7 +804,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="856" y="25" width="1144" height="840" extended-state="0" />
+    <frame x="906" y="0" width="1144" height="870" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" weight="0.22610295" />
@@ -889,8 +886,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_CLEANUP_BEFORE_PROJECT_COMMIT" value="true" />
-    <MESSAGE value="Java复习之高级部分(method reference)" />
-    <MESSAGE value="Java复习之高级部分(Stream)" />
     <MESSAGE value="Java复习之高级部分(Stream | ParallelStream)" />
     <MESSAGE value="pom" />
     <MESSAGE value="stream" />
@@ -914,7 +909,9 @@
     <MESSAGE value="Java 基础" />
     <MESSAGE value="JVM 类加载子系统" />
     <MESSAGE value="JVM 类加载子系统-双亲委派机制" />
-    <option name="LAST_COMMIT_MESSAGE" value="JVM 类加载子系统-双亲委派机制" />
+    <MESSAGE value="JVM 沙箱机制 类主动使用和被动使用" />
+    <MESSAGE value="JVM 运行时数据区" />
+    <option name="LAST_COMMIT_MESSAGE" value="JVM 运行时数据区" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
@@ -997,8 +994,8 @@
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="FIRST">
-          <first_editor relative-caret-position="438">
-            <caret line="283" column="32" selection-start-line="283" selection-start-column="32" selection-end-line="283" selection-end-column="32" />
+          <first_editor relative-caret-position="495">
+            <caret line="325" column="3" lean-forward="true" selection-start-line="325" selection-start-column="3" selection-end-line="325" selection-end-column="3" />
           </first_editor>
           <second_editor />
         </state>
