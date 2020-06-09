@@ -2,6 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a48103bc-3033-486e-9694-fcaa31a9b740" name="Default" comment="JVM 类加载子系统-双亲委派机制">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/allst/jcore/jvm/SandboxSafety.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/java/lang/Sandbox.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/java/lang/String.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
@@ -17,13 +20,13 @@
     <option name="PARALLEL_COMPILATION" value="true" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="FIRST">
-              <first_editor relative-caret-position="490">
-                <caret line="264" column="6" selection-start-line="264" selection-start-column="6" selection-end-line="264" selection-end-column="6" />
+              <first_editor relative-caret-position="438">
+                <caret line="283" column="32" selection-start-line="283" selection-start-column="32" selection-end-line="283" selection-end-column="32" />
               </first_editor>
               <second_editor />
             </state>
@@ -31,19 +34,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/allst/jcore/jvm/ClassLoaderTest2.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/allst/jcore/jvm/SandboxSafety.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="486">
-              <caret line="18" column="45" lean-forward="true" selection-start-line="18" selection-start-column="45" selection-end-line="18" selection-end-column="45" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/allst/jcore/jvm/ClassLoaderTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="290">
-              <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
+            <state relative-caret-position="351">
+              <caret line="13" column="44" selection-start-line="13" selection-start-column="44" selection-end-line="13" selection-end-column="44" />
             </state>
           </provider>
         </entry>
@@ -82,6 +76,11 @@
         <option value="$PROJECT_DIR$/src/main/java/com/allst/jcore/jv8/AllstJv8Func.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/allst/jcore/jvm/ClassLoaderTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/allst/jcore/jvm/ClassLoaderTest2.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/allst/jcore/jvm/SandboxSafety.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/allst/jcore/java/lang/String.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/allst/jcore/java/lang/Sandbox.java" />
+        <option value="$PROJECT_DIR$/src/test/java/lang/String.java" />
+        <option value="$PROJECT_DIR$/src/test/java/java/lang/String.java" />
         <option value="$PROJECT_DIR$/README.md" />
       </list>
     </option>
@@ -98,11 +97,11 @@
   <component name="MavenRunner">
     <option name="jreName" value="#JAVA_HOME" />
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="288" />
-    <option name="y" value="5" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="1070" />
+    <option name="y" value="31" />
     <option name="width" value="1430" />
-    <option name="height" value="1048" />
+    <option name="height" value="1050" />
   </component>
   <component name="ProjectId" id="1baSFchSbhe1bYdjYYNWIriqAg2" />
   <component name="ProjectInspectionProfilesVisibleTreeState">
@@ -127,6 +126,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -139,41 +139,10 @@
               <item name="allst-jcore" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="allst-jcore" type="b2602c69:ProjectViewProjectNode" />
-              <item name="allst-jcore" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="allst-jcore" type="b2602c69:ProjectViewProjectNode" />
-              <item name="allst-jcore" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="allst-jcore" type="b2602c69:ProjectViewProjectNode" />
-              <item name="allst-jcore" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="jcore" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="allst-jcore" type="b2602c69:ProjectViewProjectNode" />
-              <item name="allst-jcore" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="jcore" type="462c0819:PsiDirectoryNode" />
-              <item name="jvm" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
       <pane id="Scope" />
     </panes>
   </component>
@@ -197,6 +166,9 @@
     <selection>jr</selection>
   </component>
   <component name="RecentsManager">
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="E:\IdeaProjects\allst-jcore\src\main\resources" />
       <recent name="E:\IdeaProjects\allst-jcore\src\main\java\com\allst\jcore\basic" />
@@ -221,7 +193,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.ClassLoaderTest2">
+  <component name="RunManager" selected="Application.String">
     <configuration default="true" type="Applet">
       <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
       <method v="2">
@@ -284,13 +256,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TemplateMethod" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.allst.jcore.basic.TemplateMethod" />
+    <configuration name="String" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="java.lang.String" />
       <module name="allst-jcore" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.allst.jcore.basic.*" />
+          <option name="PATTERN" value="java.lang.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -393,19 +365,19 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="Application.TemplateMethod" />
       <item itemvalue="Application.InterfaceUsage" />
       <item itemvalue="Application.AllstJv8Func" />
       <item itemvalue="Application.ClassLoaderTest" />
       <item itemvalue="Application.ClassLoaderTest2" />
+      <item itemvalue="Application.String" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.String" />
         <item itemvalue="Application.ClassLoaderTest2" />
         <item itemvalue="Application.ClassLoaderTest" />
         <item itemvalue="Application.AllstJv8Func" />
         <item itemvalue="Application.InterfaceUsage" />
-        <item itemvalue="Application.TemplateMethod" />
       </list>
     </recent_temporary>
   </component>
@@ -470,14 +442,11 @@
       <workItem from="1588869121111" duration="29000" />
       <workItem from="1591014499621" duration="7788000" />
       <workItem from="1591023572040" duration="1110000" />
-      <workItem from="1591108156251" duration="5633000" />
-    </task>
-    <task id="LOCAL-00010" summary="Java复习之高级部分(basic &amp; lambda)">
-      <created>1584982981090</created>
-      <option name="number" value="00010" />
-      <option name="presentableId" value="LOCAL-00010" />
-      <option name="project" value="LOCAL" />
-      <updated>1584982981090</updated>
+      <workItem from="1591108156251" duration="5664000" />
+      <workItem from="1591279707248" duration="620000" />
+      <workItem from="1591545205842" duration="67000" />
+      <workItem from="1591548736601" duration="631000" />
+      <workItem from="1591709705332" duration="1842000" />
     </task>
     <task id="LOCAL-00011" summary="Java复习之高级部分(lambda expression)">
       <created>1585062209046</created>
@@ -815,11 +784,18 @@
       <option name="project" value="LOCAL" />
       <updated>1591113413419</updated>
     </task>
-    <option name="localTasksCounter" value="59" />
+    <task id="LOCAL-00059" summary="JVM 类加载子系统-双亲委派机制">
+      <created>1591113821921</created>
+      <option name="number" value="00059" />
+      <option name="presentableId" value="LOCAL-00059" />
+      <option name="project" value="LOCAL" />
+      <updated>1591113821921</updated>
+    </task>
+    <option name="localTasksCounter" value="60" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="14531000" />
+    <option name="totallyTimeSpent" value="17722000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -831,10 +807,10 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="830" y="0" width="1144" height="838" extended-state="0" />
+    <frame x="856" y="25" width="1144" height="840" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" weight="0.2555147" />
+      <window_info content_ui="combo" id="Project" order="0" weight="0.22610295" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="JRebel" order="2" side_tool="true" />
       <window_info id="UI Designer" order="3" />
@@ -842,14 +818,14 @@
       <window_info id="Designer" order="5" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.32763532" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32670453" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Terminal" order="7" />
       <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" weight="0.32763532" />
+      <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" weight="0.32614556" />
       <window_info anchor="bottom" id="Messages" order="10" />
       <window_info anchor="bottom" id="Java Enterprise" order="11" />
       <window_info anchor="bottom" id="Database Changes" order="12" />
@@ -989,11 +965,40 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/allst/jcore/jvm/SandboxSafety.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="351">
+          <caret line="13" column="44" selection-start-line="13" selection-start-column="44" selection-end-line="13" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/java/lang/Sandbox.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="8" column="34" selection-start-line="8" selection-start-column="34" selection-end-line="8" selection-end-column="34" />
+          <folding>
+            <element signature="e#156#157#0" expanded="true" />
+            <element signature="e#200#201#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/java/lang/String.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="81">
+          <caret line="3" column="9" selection-start-line="3" selection-start-column="9" selection-end-line="3" selection-end-column="9" />
+          <folding>
+            <element signature="e#206#207#0" expanded="true" />
+            <element signature="e#250#251#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="FIRST">
-          <first_editor relative-caret-position="490">
-            <caret line="264" column="6" selection-start-line="264" selection-start-column="6" selection-end-line="264" selection-end-column="6" />
+          <first_editor relative-caret-position="438">
+            <caret line="283" column="32" selection-start-line="283" selection-start-column="32" selection-end-line="283" selection-end-column="32" />
           </first_editor>
           <second_editor />
         </state>
