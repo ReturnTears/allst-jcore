@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a48103bc-3033-486e-9694-fcaa31a9b740" name="Default" comment="JVM 程序计数器">
+    <list default="true" id="a48103bc-3033-486e-9694-fcaa31a9b740" name="Default" comment="JVM 虚拟机栈">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
@@ -22,8 +22,8 @@
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="FIRST">
-              <first_editor relative-caret-position="587">
-                <caret line="362" lean-forward="true" selection-start-line="362" selection-end-line="362" />
+              <first_editor relative-caret-position="506">
+                <caret line="369" column="34" selection-start-line="369" selection-start-column="34" selection-end-line="369" selection-end-column="34" />
               </first_editor>
               <second_editor />
             </state>
@@ -105,8 +105,8 @@
     <option name="jreName" value="#JAVA_HOME" />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="581" />
-    <option name="y" value="6" />
+    <option name="x" value="342" />
+    <option name="y" value="35" />
     <option name="width" value="1430" />
     <option name="height" value="1050" />
   </component>
@@ -132,91 +132,7 @@
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
-    <panes>
-      <pane id="PackagesPane" />
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="allst-jcore" type="b2602c69:ProjectViewProjectNode" />
-              <item name="allst-jcore" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="allst-jcore" type="b2602c69:ProjectViewProjectNode" />
-              <item name="allst-jcore" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="allst-jcore" type="b2602c69:ProjectViewProjectNode" />
-              <item name="allst-jcore" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="allst-jcore" type="b2602c69:ProjectViewProjectNode" />
-              <item name="allst-jcore" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="allst-jcore" type="b2602c69:ProjectViewProjectNode" />
-              <item name="allst-jcore" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="allst-jcore" type="b2602c69:ProjectViewProjectNode" />
-              <item name="allst-jcore" type="462c0819:PsiDirectoryNode" />
-              <item name="target" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="allst-jcore" type="b2602c69:ProjectViewProjectNode" />
-              <item name="allst-jcore" type="462c0819:PsiDirectoryNode" />
-              <item name="target" type="462c0819:PsiDirectoryNode" />
-              <item name="classes" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="allst-jcore" type="b2602c69:ProjectViewProjectNode" />
-              <item name="allst-jcore" type="462c0819:PsiDirectoryNode" />
-              <item name="target" type="462c0819:PsiDirectoryNode" />
-              <item name="classes" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="allst-jcore" type="b2602c69:ProjectViewProjectNode" />
-              <item name="allst-jcore" type="462c0819:PsiDirectoryNode" />
-              <item name="target" type="462c0819:PsiDirectoryNode" />
-              <item name="classes" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="allst" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="allst-jcore" type="b2602c69:ProjectViewProjectNode" />
-              <item name="allst-jcore" type="462c0819:PsiDirectoryNode" />
-              <item name="target" type="462c0819:PsiDirectoryNode" />
-              <item name="classes" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="allst" type="462c0819:PsiDirectoryNode" />
-              <item name="jcore" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="allst-jcore" type="b2602c69:ProjectViewProjectNode" />
-              <item name="allst-jcore" type="462c0819:PsiDirectoryNode" />
-              <item name="target" type="462c0819:PsiDirectoryNode" />
-              <item name="classes" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="allst" type="462c0819:PsiDirectoryNode" />
-              <item name="jcore" type="462c0819:PsiDirectoryNode" />
-              <item name="jvm" type="462c0819:PsiDirectoryNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
-      <pane id="Scope" />
-    </panes>
+    <panes />
   </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -434,14 +350,7 @@
       <workItem from="1591545205842" duration="67000" />
       <workItem from="1591548736601" duration="631000" />
       <workItem from="1591709705332" duration="7866000" />
-      <workItem from="1591801114973" duration="2052000" />
-    </task>
-    <task id="LOCAL-00016" summary="Java复习之高级部分(method reference)">
-      <created>1585233903378</created>
-      <option name="number" value="00016" />
-      <option name="presentableId" value="LOCAL-00016" />
-      <option name="project" value="LOCAL" />
-      <updated>1585233903378</updated>
+      <workItem from="1591801114973" duration="2719000" />
     </task>
     <task id="LOCAL-00017" summary="Java复习之高级部分(Stream)">
       <created>1585235537858</created>
@@ -779,11 +688,18 @@
       <option name="project" value="LOCAL" />
       <updated>1591717501384</updated>
     </task>
-    <option name="localTasksCounter" value="65" />
+    <task id="LOCAL-00065" summary="JVM 虚拟机栈">
+      <created>1591803262711</created>
+      <option name="number" value="00065" />
+      <option name="presentableId" value="LOCAL-00065" />
+      <option name="project" value="LOCAL" />
+      <updated>1591803262712</updated>
+    </task>
+    <option name="localTasksCounter" value="66" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="25798000" />
+    <option name="totallyTimeSpent" value="26465000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -795,7 +711,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="964" y="10" width="1144" height="840" extended-state="0" />
+    <frame x="866" y="4" width="1144" height="840" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" weight="0.30147058" />
@@ -877,7 +793,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_CLEANUP_BEFORE_PROJECT_COMMIT" value="true" />
-    <MESSAGE value="pom" />
     <MESSAGE value="stream" />
     <MESSAGE value="common use methods" />
     <MESSAGE value="match" />
@@ -902,7 +817,8 @@
     <MESSAGE value="JVM 沙箱机制 类主动使用和被动使用" />
     <MESSAGE value="JVM 运行时数据区" />
     <MESSAGE value="JVM 程序计数器" />
-    <option name="LAST_COMMIT_MESSAGE" value="JVM 程序计数器" />
+    <MESSAGE value="JVM 虚拟机栈" />
+    <option name="LAST_COMMIT_MESSAGE" value="JVM 虚拟机栈" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
@@ -978,8 +894,8 @@
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="FIRST">
-          <first_editor relative-caret-position="587">
-            <caret line="362" lean-forward="true" selection-start-line="362" selection-end-line="362" />
+          <first_editor relative-caret-position="506">
+            <caret line="369" column="34" selection-start-line="369" selection-start-column="34" selection-end-line="369" selection-end-column="34" />
           </first_editor>
           <second_editor />
         </state>
