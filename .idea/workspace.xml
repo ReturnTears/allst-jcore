@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a48103bc-3033-486e-9694-fcaa31a9b740" name="Default" comment="JVM 虚拟机栈 - 操作数栈">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/allst/jcore/jvm/DynamicLinking.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/allst/jcore/jvm/OperandStack.java" afterDir="false" />
+    <list default="true" id="a48103bc-3033-486e-9694-fcaa31a9b740" name="Default" comment="JVM 虚拟机栈 - 动态连接">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
@@ -24,32 +22,10 @@
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="FIRST">
-              <first_editor relative-caret-position="252">
-                <caret line="440" column="28" selection-start-line="440" selection-start-column="28" selection-end-line="440" selection-end-column="28" />
+              <first_editor relative-caret-position="422">
+                <caret line="463" lean-forward="true" selection-start-line="463" selection-end-line="463" />
               </first_editor>
               <second_editor />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/allst/jcore/jvm/DynamicLinking.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="378">
-              <caret line="14" column="18" selection-start-line="14" selection-start-column="18" selection-end-line="14" selection-end-column="18" />
-              <folding>
-                <element signature="e#144#145#0" expanded="true" />
-                <element signature="e#180#181#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/allst/jcore/jvm/OperandStack.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="243">
-              <caret line="9" column="18" lean-forward="true" selection-start-line="9" selection-start-column="18" selection-end-line="9" selection-end-column="18" />
             </state>
           </provider>
         </entry>
@@ -113,10 +89,11 @@
   <component name="MavenRunner">
     <option name="jreName" value="#JAVA_HOME" />
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="1116" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="477" />
+    <option name="y" value="47" />
     <option name="width" value="1430" />
-    <option name="height" value="1088" />
+    <option name="height" value="1083" />
   </component>
   <component name="ProjectId" id="1baSFchSbhe1bYdjYYNWIriqAg2" />
   <component name="ProjectInspectionProfilesVisibleTreeState">
@@ -141,6 +118,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -187,8 +166,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="ProjectViewState">
@@ -412,14 +389,8 @@
       <workItem from="1592108833253" duration="86000" />
       <workItem from="1592109220588" duration="1234000" />
       <workItem from="1592224781678" duration="5948000" />
-      <workItem from="1592697422716" duration="4702000" />
-    </task>
-    <task id="LOCAL-00023" summary="match">
-      <created>1585450873757</created>
-      <option name="number" value="00023" />
-      <option name="presentableId" value="LOCAL-00023" />
-      <option name="project" value="LOCAL" />
-      <updated>1585450873757</updated>
+      <workItem from="1592697422716" duration="4876000" />
+      <workItem from="1592836924846" duration="3307000" />
     </task>
     <task id="LOCAL-00024" summary="find">
       <created>1585452373103</created>
@@ -757,11 +728,18 @@
       <option name="project" value="LOCAL" />
       <updated>1592230695129</updated>
     </task>
-    <option name="localTasksCounter" value="72" />
+    <task id="LOCAL-00072" summary="JVM 虚拟机栈 - 动态连接">
+      <created>1592702558047</created>
+      <option name="number" value="00072" />
+      <option name="presentableId" value="LOCAL-00072" />
+      <option name="project" value="LOCAL" />
+      <updated>1592702558047</updated>
+    </task>
+    <option name="localTasksCounter" value="73" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="45174000" />
+    <option name="totallyTimeSpent" value="48655000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -773,10 +751,10 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="893" y="0" width="1144" height="870" extended-state="0" />
+    <frame x="382" y="38" width="1144" height="866" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" weight="0.34834558" />
+      <window_info content_ui="combo" id="Project" order="0" weight="0.3480589" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="JRebel" order="2" side_tool="true" />
       <window_info id="UI Designer" order="3" />
@@ -855,7 +833,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_CLEANUP_BEFORE_PROJECT_COMMIT" value="true" />
-    <MESSAGE value="NumericStream" />
     <MESSAGE value="Stream case" />
     <MESSAGE value="Optional" />
     <MESSAGE value="SummarizingInt" />
@@ -880,7 +857,8 @@
     <MESSAGE value="JVM 虚拟机栈 - 局部变量表" />
     <MESSAGE value="JVM 虚拟机栈 - slot" />
     <MESSAGE value="JVM 虚拟机栈 - 操作数栈" />
-    <option name="LAST_COMMIT_MESSAGE" value="JVM 虚拟机栈 - 操作数栈" />
+    <MESSAGE value="JVM 虚拟机栈 - 动态连接" />
+    <option name="LAST_COMMIT_MESSAGE" value="JVM 虚拟机栈 - 动态连接" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
@@ -988,8 +966,8 @@
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="FIRST">
-          <first_editor relative-caret-position="252">
-            <caret line="440" column="28" selection-start-line="440" selection-start-column="28" selection-end-line="440" selection-end-column="28" />
+          <first_editor relative-caret-position="422">
+            <caret line="463" lean-forward="true" selection-start-line="463" selection-end-line="463" />
           </first_editor>
           <second_editor />
         </state>
