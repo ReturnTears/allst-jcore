@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a48103bc-3033-486e-9694-fcaa31a9b740" name="Default" comment="JVM 虚拟机栈 - 动态连接">
+    <list default="true" id="a48103bc-3033-486e-9694-fcaa31a9b740" name="Default" comment="JVM 虚拟机栈 - 方法调用">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
@@ -22,8 +22,8 @@
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="FIRST">
-              <first_editor relative-caret-position="422">
-                <caret line="463" lean-forward="true" selection-start-line="463" selection-end-line="463" />
+              <first_editor relative-caret-position="496">
+                <caret line="473" lean-forward="true" selection-start-line="473" selection-end-line="473" />
               </first_editor>
               <second_editor />
             </state>
@@ -89,11 +89,11 @@
   <component name="MavenRunner">
     <option name="jreName" value="#JAVA_HOME" />
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="477" />
-    <option name="y" value="47" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="281" />
+    <option name="y" value="63" />
     <option name="width" value="1430" />
-    <option name="height" value="1083" />
+    <option name="height" value="1008" />
   </component>
   <component name="ProjectId" id="1baSFchSbhe1bYdjYYNWIriqAg2" />
   <component name="ProjectInspectionProfilesVisibleTreeState">
@@ -390,14 +390,7 @@
       <workItem from="1592109220588" duration="1234000" />
       <workItem from="1592224781678" duration="5948000" />
       <workItem from="1592697422716" duration="4876000" />
-      <workItem from="1592836924846" duration="3307000" />
-    </task>
-    <task id="LOCAL-00024" summary="find">
-      <created>1585452373103</created>
-      <option name="number" value="00024" />
-      <option name="presentableId" value="LOCAL-00024" />
-      <option name="project" value="LOCAL" />
-      <updated>1585452373103</updated>
+      <workItem from="1592836924846" duration="4880000" />
     </task>
     <task id="LOCAL-00025" summary="reduce">
       <created>1585453764403</created>
@@ -735,11 +728,18 @@
       <option name="project" value="LOCAL" />
       <updated>1592702558047</updated>
     </task>
-    <option name="localTasksCounter" value="73" />
+    <task id="LOCAL-00073" summary="JVM 虚拟机栈 - 方法调用">
+      <created>1592840434643</created>
+      <option name="number" value="00073" />
+      <option name="presentableId" value="LOCAL-00073" />
+      <option name="project" value="LOCAL" />
+      <updated>1592840434644</updated>
+    </task>
+    <option name="localTasksCounter" value="74" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="48655000" />
+    <option name="totallyTimeSpent" value="50228000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -751,7 +751,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="382" y="38" width="1144" height="866" extended-state="0" />
+    <frame x="-7" y="-7" width="1550" height="878" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" weight="0.3480589" />
@@ -769,7 +769,7 @@
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Terminal" order="7" sideWeight="0.4986613" weight="0.3207547" />
       <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.50133866" side_tool="true" weight="0.31960228" />
+      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.50133866" side_tool="true" weight="0.31880108" />
       <window_info anchor="bottom" id="Messages" order="10" />
       <window_info anchor="bottom" id="Java Enterprise" order="11" />
       <window_info anchor="bottom" id="Database Changes" order="12" />
@@ -833,7 +833,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_CLEANUP_BEFORE_PROJECT_COMMIT" value="true" />
-    <MESSAGE value="Stream case" />
     <MESSAGE value="Optional" />
     <MESSAGE value="SummarizingInt" />
     <MESSAGE value="collector" />
@@ -858,7 +857,8 @@
     <MESSAGE value="JVM 虚拟机栈 - slot" />
     <MESSAGE value="JVM 虚拟机栈 - 操作数栈" />
     <MESSAGE value="JVM 虚拟机栈 - 动态连接" />
-    <option name="LAST_COMMIT_MESSAGE" value="JVM 虚拟机栈 - 动态连接" />
+    <MESSAGE value="JVM 虚拟机栈 - 方法调用" />
+    <option name="LAST_COMMIT_MESSAGE" value="JVM 虚拟机栈 - 方法调用" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
@@ -966,8 +966,8 @@
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="FIRST">
-          <first_editor relative-caret-position="422">
-            <caret line="463" lean-forward="true" selection-start-line="463" selection-end-line="463" />
+          <first_editor relative-caret-position="496">
+            <caret line="473" lean-forward="true" selection-start-line="473" selection-end-line="473" />
           </first_editor>
           <second_editor />
         </state>
