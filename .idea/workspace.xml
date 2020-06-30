@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a48103bc-3033-486e-9694-fcaa31a9b740" name="Default" comment="JVM 本地方法">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/allst/jcore/jvm/HeapSpace.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/allst/jcore/jvm/HeapSpace1.java" afterDir="false" />
+    <list default="true" id="a48103bc-3033-486e-9694-fcaa31a9b740" name="Default" comment="JVM 堆空间核心概述">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/allst/jcore/jvm/HeapSpaceInitial.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
@@ -20,32 +19,23 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="FIRST">
-              <first_editor relative-caret-position="259">
-                <caret line="512" column="25" selection-start-line="512" selection-start-column="25" selection-end-line="512" selection-end-column="25" />
+              <first_editor relative-caret-position="232">
+                <caret line="526" column="28" lean-forward="true" selection-start-line="526" selection-start-column="28" selection-end-line="526" selection-end-column="28" />
               </first_editor>
               <second_editor />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/allst/jcore/jvm/HeapSpace.java">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/allst/jcore/jvm/HeapSpaceInitial.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="108">
-              <caret line="4" column="21" lean-forward="true" selection-start-line="4" selection-start-column="21" selection-end-line="4" selection-end-column="21" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/allst/jcore/jvm/HeapSpace1.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="81">
-              <caret line="3" column="6" lean-forward="true" selection-start-line="3" selection-start-column="6" selection-end-line="3" selection-end-column="6" />
+            <state relative-caret-position="62">
+              <caret line="3" column="40" selection-start-line="3" selection-start-column="40" selection-end-line="3" selection-end-column="40" />
             </state>
           </provider>
         </entry>
@@ -97,6 +87,7 @@
         <option value="$PROJECT_DIR$/src/main/java/com/allst/jcore/jvm/HeapSpace.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/allst/jcore/jvm/HeapSpace1.java" />
         <option value="$PROJECT_DIR$/README.md" />
+        <option value="$PROJECT_DIR$/src/main/java/com/allst/jcore/jvm/HeapSpaceInitial.java" />
       </list>
     </option>
   </component>
@@ -113,10 +104,10 @@
     <option name="jreName" value="#JAVA_HOME" />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="315" />
-    <option name="y" value="25" />
+    <option name="x" value="420" />
+    <option name="y" value="17" />
     <option name="width" value="1430" />
-    <option name="height" value="1029" />
+    <option name="height" value="1030" />
   </component>
   <component name="ProjectId" id="1baSFchSbhe1bYdjYYNWIriqAg2" />
   <component name="ProjectInspectionProfilesVisibleTreeState">
@@ -141,7 +132,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
@@ -189,6 +179,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="ProjectViewState">
@@ -242,7 +233,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.HeapSpace1">
+  <component name="RunManager" selected="Application.HeapSpaceInitial">
     <configuration default="true" type="Applet">
       <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
       <method v="2">
@@ -252,7 +243,7 @@
     <configuration name="HeapSpace" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.allst.jcore.jvm.HeapSpace" />
       <module name="allst-jcore" />
-      <option name="VM_PARAMETERS" value="-Xms10M -Xmx10M" />
+      <option name="VM_PARAMETERS" value="-Xms10m -Xmx10m" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="com.allst.jcore.jvm.*" />
@@ -266,7 +257,21 @@
     <configuration name="HeapSpace1" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="com.allst.jcore.jvm.HeapSpace1" />
       <module name="allst-jcore" />
-      <option name="VM_PARAMETERS" value="-Xms20M -Xmx20M" />
+      <option name="VM_PARAMETERS" value="-Xms20m -Xmx20m" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="HeapSpaceInitial" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.allst.jcore.jvm.HeapSpaceInitial" />
+      <module name="allst-jcore" />
+      <option name="VM_PARAMETERS" value="-Xms600m -Xmx600m -XX:+PrintGCDetails" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.allst.jcore.jvm.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -368,9 +373,11 @@
     <list>
       <item itemvalue="Application.HeapSpace1" />
       <item itemvalue="Application.HeapSpace" />
+      <item itemvalue="Application.HeapSpaceInitial" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.HeapSpaceInitial" />
         <item itemvalue="Application.HeapSpace" />
       </list>
     </recent_temporary>
@@ -449,14 +456,8 @@
       <workItem from="1592697422716" duration="4876000" />
       <workItem from="1592836924846" duration="4911000" />
       <workItem from="1593350306854" duration="4622000" />
-      <workItem from="1593441064933" duration="3782000" />
-    </task>
-    <task id="LOCAL-00027" summary="Stream case">
-      <created>1585495581975</created>
-      <option name="number" value="00027" />
-      <option name="presentableId" value="LOCAL-00027" />
-      <option name="project" value="LOCAL" />
-      <updated>1585495581975</updated>
+      <workItem from="1593441064933" duration="4159000" />
+      <workItem from="1593523813804" duration="3964000" />
     </task>
     <task id="LOCAL-00028" summary="Optional">
       <created>1585499052409</created>
@@ -794,11 +795,18 @@
       <option name="project" value="LOCAL" />
       <updated>1593355425463</updated>
     </task>
-    <option name="localTasksCounter" value="76" />
+    <task id="LOCAL-00076" summary="JVM 堆空间核心概述">
+      <created>1593444987564</created>
+      <option name="number" value="00076" />
+      <option name="presentableId" value="LOCAL-00076" />
+      <option name="project" value="LOCAL" />
+      <updated>1593444987565</updated>
+    </task>
+    <option name="localTasksCounter" value="77" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="58663000" />
+    <option name="totallyTimeSpent" value="63004000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -810,7 +818,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="252" y="20" width="1144" height="823" extended-state="0" />
+    <frame x="602" y="16" width="1144" height="824" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" weight="0.26746324" />
@@ -821,14 +829,14 @@
       <window_info id="Designer" order="5" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.35225618" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.3502907" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32884097" />
       <window_info anchor="bottom" id="Terminal" order="7" sideWeight="0.4986613" weight="0.5458221" />
       <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.50133866" side_tool="true" weight="0.31880108" />
+      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.50133866" side_tool="true" weight="0.3187773" />
       <window_info anchor="bottom" id="Messages" order="10" />
       <window_info anchor="bottom" id="Java Enterprise" order="11" />
       <window_info anchor="bottom" id="Database Changes" order="12" />
@@ -892,7 +900,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_CLEANUP_BEFORE_PROJECT_COMMIT" value="true" />
-    <MESSAGE value="SummarizingInt" />
     <MESSAGE value="collector" />
     <MESSAGE value="自定义collector" />
     <MESSAGE value="并行parallelStream" />
@@ -917,7 +924,8 @@
     <MESSAGE value="JVM 虚拟机栈 - 动态连接" />
     <MESSAGE value="JVM 虚拟机栈 - 方法调用" />
     <MESSAGE value="JVM 本地方法" />
-    <option name="LAST_COMMIT_MESSAGE" value="JVM 本地方法" />
+    <MESSAGE value="JVM 堆空间核心概述" />
+    <option name="LAST_COMMIT_MESSAGE" value="JVM 堆空间核心概述" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
@@ -951,13 +959,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="108">
           <caret line="6" column="3" lean-forward="true" selection-start-line="6" selection-start-column="3" selection-end-line="6" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/allst/jcore/jvm/ClassLoaderTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="290">
-          <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
         </state>
       </provider>
     </entry>
@@ -1029,13 +1030,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/allst/jcore/jvm/HeapSpace.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="4" column="21" lean-forward="true" selection-start-line="4" selection-start-column="21" selection-end-line="4" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/allst/jcore/jvm/HeapSpace1.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="81">
@@ -1043,13 +1037,34 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/allst/jcore/jvm/ClassLoaderTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="290">
+          <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/allst/jcore/jvm/HeapSpace.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="351">
+          <caret line="13" column="42" lean-forward="true" selection-start-line="13" selection-start-column="42" selection-end-line="13" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="FIRST">
-          <first_editor relative-caret-position="259">
-            <caret line="512" column="25" selection-start-line="512" selection-start-column="25" selection-end-line="512" selection-end-column="25" />
+          <first_editor relative-caret-position="232">
+            <caret line="526" column="28" lean-forward="true" selection-start-line="526" selection-start-column="28" selection-end-line="526" selection-end-column="28" />
           </first_editor>
           <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/allst/jcore/jvm/HeapSpaceInitial.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="62">
+          <caret line="3" column="40" selection-start-line="3" selection-start-column="40" selection-end-line="3" selection-end-column="40" />
         </state>
       </provider>
     </entry>
