@@ -514,8 +514,8 @@ Java堆区在JVM启动的时候即被创建，其空间大小也就确定了。�
 
 堆内存细分
 现代垃圾收集器大部分都基于分代收集理论设计，堆空间细分为：
-Java7及之前堆内存逻辑上分为三部分：新生代(Young:Eden+Survivor)+老年代(Old)+永久区(Perm)
-Java8及之后堆内存逻辑上分为三部分：新生代(Young:Eden+Survivor)+老年代(Old)+元空间(Meta)
+Java7及之前堆内存逻辑上分为三部分：新生代(Young:Eden+Survivor:(S0+S1))+老年代(Old)+永久区(Perm)
+Java8及之后堆内存逻辑上分为三部分：新生代(Young:Eden+Survivor:(S0+S1))+老年代(Old)+元空间(Meta)
 
 2、设置堆内存大小与OOM
 Java堆区用于存储Java对象实例，那么堆的大小在JVM启动时就已经设定好了，大家可以通过选项"-Xmx"和"-Xms"来进行设置。
@@ -525,9 +525,20 @@ Java堆区用于存储Java对象实例，那么堆的大小在JVM启动时就已
 通过会将-Xms和-Xmx两个参数配置相同的值，其目的时为了能够在Java垃圾回收机制清理完堆区后不需要重新分隔计算堆区的大小，从而提高性能
 默认情况下，初始内存大小：物理电脑内存大小 / 64
            最大内存大小：物理内存大小 / 4
-
+使用JDK自带的jvisualvm工具查看visualGC 信息
+JPS查看Java运行进程，jstat -gc pid查看进程中堆内存大小及使用情况
+                    jinfo -flag NewRatio pid
 
 3、年轻代与老年代
+配置新生代和老年代在对结构的占比：
+默认-XX:NewRatio=2,表示新生代占1，老年代占2，新生代占整个堆内存的1/3
+可以修改-XX:NewRatio=4,表示新生代占1，老年代占4，新生代占整个堆内存的1/5
+在HotSpot中，Eden区与Survivor区中的S0和S1空间所占的比例是8:1:1
+开发人员也可以通过"-XX:SurvivorRatio"设置上述比例，例如：-XX:SurvivorRatio=8
+几乎所有的Java对象都是在Eden区被new出来的。
+绝大数的Java对象的销毁都在新生代进行了
+可以使用-Xmn设置新生代的空间大小
+
 4、图解对象分配过程
 5、Minor GC、Major GC、Full GC
 6、堆空间分代思想
