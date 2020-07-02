@@ -94,10 +94,10 @@
     <option name="jreName" value="#JAVA_HOME" />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="230" />
-    <option name="y" value="18" />
+    <option name="x" value="128" />
+    <option name="y" value="25" />
     <option name="width" value="1788" />
-    <option name="height" value="1287" />
+    <option name="height" value="1027" />
   </component>
   <component name="ProjectId" id="1baSFchSbhe1bYdjYYNWIriqAg2" />
   <component name="ProjectInspectionProfilesVisibleTreeState">
@@ -763,7 +763,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="67909000" />
+    <option name="totallyTimeSpent" value="68138000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1018,8 +1018,8 @@
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="FIRST">
-          <first_editor relative-caret-position="287">
-            <caret line="547" column="33" selection-start-line="547" selection-start-column="33" selection-end-line="547" selection-end-column="33" />
+          <first_editor relative-caret-position="233">
+            <caret line="545" column="19" lean-forward="true" selection-start-line="545" selection-start-column="19" selection-end-line="545" selection-end-column="19" />
           </first_editor>
           <second_editor />
         </state>
