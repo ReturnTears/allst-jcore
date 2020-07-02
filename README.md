@@ -540,7 +540,12 @@ JPS查看Java运行进程，jstat -gc pid查看进程中堆内存大小及使用
 可以使用-Xmn设置新生代的空间大小
 
 4、图解对象分配过程
+
 5、Minor GC、Major GC、Full GC
+YGC 等同于 Minor GC
+Old GC 等同于 Major GC
+混合收集(mixed GC)：收集整个新生代以及部分老年代的垃圾收集
+整堆收集(full GC): 收集整个Java堆和方法区的垃圾收集 
 6、堆空间分代思想
 7、内存分配策略
 8、为对象分配内存 TLAB

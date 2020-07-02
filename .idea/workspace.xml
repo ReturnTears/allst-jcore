@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a48103bc-3033-486e-9694-fcaa31a9b740" name="Default" comment="JVM 堆内存的设置及查看">
+    <list default="true" id="a48103bc-3033-486e-9694-fcaa31a9b740" name="Default" comment="JVM 新生代老年代">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
@@ -17,24 +17,15 @@
     <option name="PARALLEL_COMPILATION" value="true" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="FIRST">
-              <first_editor relative-caret-position="448">
-                <caret line="539" column="18" selection-start-line="539" selection-start-column="18" selection-end-line="539" selection-end-column="18" />
+              <first_editor relative-caret-position="233">
+                <caret line="545" column="19" lean-forward="true" selection-start-line="545" selection-start-column="19" selection-end-line="545" selection-end-column="19" />
               </first_editor>
               <second_editor />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/allst/jcore/jvm/HeapSpaceInitial.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="197">
-              <caret line="17" column="1" lean-forward="true" selection-start-line="17" selection-start-column="1" selection-end-line="17" selection-end-column="1" />
             </state>
           </provider>
         </entry>
@@ -103,10 +94,10 @@
     <option name="jreName" value="#JAVA_HOME" />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="382" />
-    <option name="y" value="17" />
-    <option name="width" value="1430" />
-    <option name="height" value="1030" />
+    <option name="x" value="230" />
+    <option name="y" value="18" />
+    <option name="width" value="1788" />
+    <option name="height" value="1287" />
   </component>
   <component name="ProjectId" id="1baSFchSbhe1bYdjYYNWIriqAg2" />
   <component name="ProjectInspectionProfilesVisibleTreeState">
@@ -132,6 +123,7 @@
     </navigator>
     <panes>
       <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -139,46 +131,10 @@
               <item name="allst-jcore" type="b2602c69:ProjectViewProjectNode" />
               <item name="allst-jcore" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="allst-jcore" type="b2602c69:ProjectViewProjectNode" />
-              <item name="allst-jcore" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="allst-jcore" type="b2602c69:ProjectViewProjectNode" />
-              <item name="allst-jcore" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="allst-jcore" type="b2602c69:ProjectViewProjectNode" />
-              <item name="allst-jcore" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="allst-jcore" type="b2602c69:ProjectViewProjectNode" />
-              <item name="allst-jcore" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="jcore" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="allst-jcore" type="b2602c69:ProjectViewProjectNode" />
-              <item name="allst-jcore" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="jcore" type="462c0819:PsiDirectoryNode" />
-              <item name="jvm" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="ProjectViewState">
@@ -456,14 +412,9 @@
       <workItem from="1592836924846" duration="4911000" />
       <workItem from="1593350306854" duration="4622000" />
       <workItem from="1593441064933" duration="4159000" />
-      <workItem from="1593523813804" duration="5991000" />
-    </task>
-    <task id="LOCAL-00029" summary="Optional">
-      <created>1585499414991</created>
-      <option name="number" value="00029" />
-      <option name="presentableId" value="LOCAL-00029" />
-      <option name="project" value="LOCAL" />
-      <updated>1585499414991</updated>
+      <workItem from="1593523813804" duration="6143000" />
+      <workItem from="1593698208515" duration="2726000" />
+      <workItem from="1593701671529" duration="208000" />
     </task>
     <task id="LOCAL-00030" summary="Optional">
       <created>1585575635816</created>
@@ -801,11 +752,18 @@
       <option name="project" value="LOCAL" />
       <updated>1593528011039</updated>
     </task>
-    <option name="localTasksCounter" value="78" />
+    <task id="LOCAL-00078" summary="JVM 新生代老年代">
+      <created>1593529969436</created>
+      <option name="number" value="00078" />
+      <option name="presentableId" value="LOCAL-00078" />
+      <option name="project" value="LOCAL" />
+      <updated>1593529969436</updated>
+    </task>
+    <option name="localTasksCounter" value="79" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="65031000" />
+    <option name="totallyTimeSpent" value="67909000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -817,10 +775,10 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="846" y="11" width="1144" height="824" extended-state="0" />
+    <frame x="184" y="15" width="1430" height="1029" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" weight="0.26746324" />
+      <window_info content_ui="combo" id="Project" order="0" weight="0.2720588" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="JRebel" order="2" side_tool="true" />
       <window_info id="UI Designer" order="3" />
@@ -835,7 +793,7 @@
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32884097" />
       <window_info anchor="bottom" id="Terminal" order="7" sideWeight="0.4986613" weight="0.5458221" />
       <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.50133866" side_tool="true" weight="0.3187773" />
+      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.50133866" side_tool="true" weight="0.31831396" />
       <window_info anchor="bottom" id="Messages" order="10" />
       <window_info anchor="bottom" id="Java Enterprise" order="11" />
       <window_info anchor="bottom" id="Database Changes" order="12" />
@@ -899,7 +857,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_CLEANUP_BEFORE_PROJECT_COMMIT" value="true" />
-    <MESSAGE value="自定义collector" />
     <MESSAGE value="并行parallelStream" />
     <MESSAGE value="forkjoin" />
     <MESSAGE value="Spliterator" />
@@ -924,7 +881,8 @@
     <MESSAGE value="JVM 本地方法" />
     <MESSAGE value="JVM 堆空间核心概述" />
     <MESSAGE value="JVM 堆内存的设置及查看" />
-    <option name="LAST_COMMIT_MESSAGE" value="JVM 堆内存的设置及查看" />
+    <MESSAGE value="JVM 新生代老年代" />
+    <option name="LAST_COMMIT_MESSAGE" value="JVM 新生代老年代" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
@@ -1060,8 +1018,8 @@
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="FIRST">
-          <first_editor relative-caret-position="448">
-            <caret line="539" column="18" selection-start-line="539" selection-start-column="18" selection-end-line="539" selection-end-column="18" />
+          <first_editor relative-caret-position="287">
+            <caret line="547" column="33" selection-start-line="547" selection-start-column="33" selection-end-line="547" selection-end-column="33" />
           </first_editor>
           <second_editor />
         </state>
