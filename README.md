@@ -546,10 +546,51 @@ YGC 等同于 Minor GC
 Old GC 等同于 Major GC
 混合收集(mixed GC)：收集整个新生代以及部分老年代的垃圾收集
 整堆收集(full GC): 收集整个Java堆和方法区的垃圾收集 
+
 6、堆空间分代思想
+为什么需要把Java堆分代？不分代就不能正常工作了码？
+经研究，不同对象的生命周期不同，70-90%的对象是临时对象
+>新生代：有Eden区，两块大小相同的Survivor(from/to, s0/s1)构成，to总为空
+>老年代，存放新生代中经历多次GC任然存活的对象
+起始不分代完全可以，分代的唯一理由就是优化GC性能。
+
 7、内存分配策略
+针对不同年龄段的对象分配原则：
+优先分配到Eden
+大对象直接分配到老年代（应尽量避免程序中出现过多的大对象）
+长期存活的对象存储在老年代
+动态对象年龄判断：如果Survivor区中相同年龄的所有对象大小的总和和大于Survivor空间的一半，年龄大于等于该年龄的对象直接存放到老年代，无需等待MaxTenuringThreshold中要求的年龄。
+空间分配担保
+    -XX:HandlePromotionFailure
+
 8、为对象分配内存 TLAB
+为什么要有TLAB（Thread Local Allocation Buffer）
+堆区是线程共享区域，任何线程都可以访问到堆区中的共享数据
+由于对象实例的创建在JVM中非常频繁，因此在并发环境下从堆区中划分内存空间是线程不安全的
+为避免多个线程操作同一个地址，需要使用加锁等机制，进而影响分配速度
+什么是TLAB?
+从内存模型而不是垃圾收集的角度，对Eden区域继续进行划分，JVM为每个线程分配了一个私有缓存区域，它包含在Eden空间内
+多线程同时分配内存时，使用TLAB可以避免一系列的非线程安全问题，同时还能够提升内分配的吞吐量，因此我们可以将这种内存分配方式称为"快速分配策略"
+所有OpenJDK衍生出来的JVM都提供了TLAB的设计
+尽管不是所有的对象实例都能过在TLAB中成功分配内存，但JVM确实时将TLAB作为内存分配的首选。
+在程序中，开发人员可以通过选项"-XX:UseTLAB"设置是否开启TLAB空间。
+默认情况下，TLAB空间的内存非常小，仅占有整个Eden空间的1%，当然我们可以通过选项"-XX:TLABWasteTargetPercent"设置TLAB空间所占用Eden的百分比大小。
+一旦对象在TLAB空间分配内存失败时，JVM就尝试着通过使用加锁机制确保数据操作的原子性，从而直接在Eden空间中分配内存。
+
 9、小结堆空间的参数设置
+https://docs.oracle.com/javase/8/docs/technotes/tools/unix/java.html
+-XX:+PrintFlagsInitial : 查看所有的参数默认初始值
+-XX:+PrintFlagsFinal : 查看所有的参数的最终值
+-Xms : 初始堆内存（默认物理内存的1/64）
+-Xmx : 最大堆内存 (默认物理内存的1/4)
+-Xmn : 设置新生代的大小(初始值及最大值)
+-XX:NewRatio ： 配置新生代与年老代在堆结构的占比
+-XX:SurvivorRatio ： 设置新生代中Eden和s0/s1空间的比例
+-XX:MaxTenuringThreshold ： 设置新生代垃圾的最大年龄
+-XX:+PrintGCDetails : 输出详细的GC处理日志
+打印GC简要信息：1）、-XX:+PrintGC 2)、-verbose:gc
+-XX:HandlePromotionFailure: 是否设置空间分配担保
+
 X、堆是分配对象的唯一选择码？
 
 ``` 
