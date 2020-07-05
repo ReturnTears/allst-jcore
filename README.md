@@ -592,14 +592,31 @@ https://docs.oracle.com/javase/8/docs/technotes/tools/unix/java.html
 -XX:HandlePromotionFailure: 是否设置空间分配担保
 
 X、堆是分配对象的唯一选择码？
+No、
+
+XI、逃逸分析
+参数-server，启动server模式，因为在server模式下，才可以启用逃逸分析
+使用逃逸分析，编译器可以对代码做如下优化：
+1、栈上分配，将堆分配转化为栈分配。如果一个对象在子程序中被分配，要是指向该对象的指针永远不会逃逸，对象可能是栈分配的候选，而不是堆分配
+2、同步策略，如果一个对象被发现只能从一额线程被访问到，那么对于这个对象的操作可以不考虑同步
+3、分离对象或标量(scalar)替换，有的对象可能不需要作为一个连续的内存结构存在也可以被访问到，那么对象的部分可以不存储在内存，而是存储在CPU寄存器中。
+
 
 ``` 
+### 方法区
+
 
 ### 备注
 ```text
 Java反编译命令：
 javap -verbose xxx.class
 javap -v xxx.class
-
+jstat -gc pid 
+jinfo -flag NewRatio pid 
+-Xmx1G 
+-Xms1G 
+-XX:+DoEscapeAnalysis 开启逃逸分析 
+-XX:+PrintGCDetails
+-XX:+EliminateAllocations 开启标量替换，运行将对象打散分配在栈中
 
 ```

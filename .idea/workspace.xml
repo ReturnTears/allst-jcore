@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a48103bc-3033-486e-9694-fcaa31a9b740" name="Default" comment="JVM 新生代老年代">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/allst/jcore/jvm/HeapArgs.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/allst/jcore/jvm/TLABArgs.java" afterDir="false" />
+    <list default="true" id="a48103bc-3033-486e-9694-fcaa31a9b740" name="Default" comment="JVM 参数设置">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
@@ -19,33 +17,15 @@
     <option name="PARALLEL_COMPILATION" value="true" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+    <leaf>
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="FIRST">
-              <first_editor relative-caret-position="10">
-                <caret line="581" selection-start-line="581" selection-end-line="581" selection-end-column="22" />
+              <first_editor relative-caret-position="100">
+                <caret line="605" column="7" selection-start-line="605" selection-start-column="7" selection-end-line="605" selection-end-column="7" />
               </first_editor>
               <second_editor />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/allst/jcore/jvm/TLABArgs.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="5" column="22" selection-start-line="5" selection-start-column="22" selection-end-line="5" selection-end-column="22" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/allst/jcore/jvm/HeapArgs.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="216">
-              <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
             </state>
           </provider>
         </entry>
@@ -65,6 +45,7 @@
       <find>true</find>
       <find>code</find>
       <find>start0</find>
+      <find>jstat</find>
     </findStrings>
     <replaceStrings>
       <replace />
@@ -98,8 +79,8 @@
         <option value="$PROJECT_DIR$/src/main/java/com/allst/jcore/jvm/HeapSpace1.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/allst/jcore/jvm/HeapSpaceInitial.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/allst/jcore/jvm/TLABArgs.java" />
-        <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/src/main/java/com/allst/jcore/jvm/HeapArgs.java" />
+        <option value="$PROJECT_DIR$/README.md" />
       </list>
     </option>
   </component>
@@ -116,10 +97,10 @@
     <option name="jreName" value="#JAVA_HOME" />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="140" />
-    <option name="y" value="31" />
-    <option name="width" value="1789" />
-    <option name="height" value="1038" />
+    <option name="x" value="56" />
+    <option name="y" value="61" />
+    <option name="width" value="1790" />
+    <option name="height" value="945" />
   </component>
   <component name="ProjectId" id="1baSFchSbhe1bYdjYYNWIriqAg2" />
   <component name="ProjectInspectionProfilesVisibleTreeState">
@@ -145,6 +126,7 @@
     </navigator>
     <panes>
       <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -178,20 +160,10 @@
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="jcore" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="allst-jcore" type="b2602c69:ProjectViewProjectNode" />
-              <item name="allst-jcore" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="jcore" type="462c0819:PsiDirectoryNode" />
-              <item name="jvm" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="ProjectViewState">
@@ -504,14 +476,10 @@
       <workItem from="1593523813804" duration="6143000" />
       <workItem from="1593698208515" duration="2726000" />
       <workItem from="1593701671529" duration="754000" />
-      <workItem from="1593820405007" duration="4624000" />
-    </task>
-    <task id="LOCAL-00032" summary="collector">
-      <created>1585581345522</created>
-      <option name="number" value="00032" />
-      <option name="presentableId" value="LOCAL-00032" />
-      <option name="project" value="LOCAL" />
-      <updated>1585581345523</updated>
+      <workItem from="1593820405007" duration="5790000" />
+      <workItem from="1593855608051" duration="1001000" />
+      <workItem from="1593857064485" duration="726000" />
+      <workItem from="1593957414428" duration="1835000" />
     </task>
     <task id="LOCAL-00033" summary="SummarizingInt">
       <created>1585581560510</created>
@@ -849,11 +817,18 @@
       <option name="project" value="LOCAL" />
       <updated>1593702083805</updated>
     </task>
-    <option name="localTasksCounter" value="81" />
+    <task id="LOCAL-00081" summary="JVM 参数设置">
+      <created>1593825185006</created>
+      <option name="number" value="00081" />
+      <option name="presentableId" value="LOCAL-00081" />
+      <option name="project" value="LOCAL" />
+      <updated>1593825185009</updated>
+    </task>
+    <option name="localTasksCounter" value="82" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="73287000" />
+    <option name="totallyTimeSpent" value="78015000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -865,32 +840,32 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="1046" y="18" width="1431" height="830" extended-state="0" />
+    <frame x="902" y="0" width="1432" height="870" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" weight="0.27127272" />
+      <window_info content_ui="combo" id="Project" order="0" weight="0.2777778" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="JRebel" order="2" side_tool="true" />
       <window_info id="UI Designer" order="3" />
       <window_info id="Favorites" order="4" side_tool="true" />
       <window_info id="Designer" order="5" />
-      <window_info anchor="bottom" id="JProfiler" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.3501441" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.3501441" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32846716" />
       <window_info anchor="bottom" id="Terminal" order="7" sideWeight="0.4986613" weight="0.5458221" />
       <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.50133866" side_tool="true" weight="0.31824818" />
+      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.50133866" side_tool="true" weight="0.3180593" />
       <window_info anchor="bottom" id="Messages" order="10" />
       <window_info anchor="bottom" id="Java Enterprise" order="11" />
       <window_info anchor="bottom" id="Database Changes" order="12" />
       <window_info anchor="bottom" id="Version Control" order="13" weight="0.32262772" />
       <window_info anchor="bottom" id="JRebel Executor" order="14" />
       <window_info anchor="bottom" id="JRebel Console" order="15" side_tool="true" />
+      <window_info anchor="bottom" id="JProfiler" order="16" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -948,7 +923,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_CLEANUP_BEFORE_PROJECT_COMMIT" value="true" />
-    <MESSAGE value="并行parallelStream" />
     <MESSAGE value="forkjoin" />
     <MESSAGE value="Spliterator" />
     <MESSAGE value="default method" />
@@ -973,7 +947,8 @@
     <MESSAGE value="JVM 堆空间核心概述" />
     <MESSAGE value="JVM 堆内存的设置及查看" />
     <MESSAGE value="JVM 新生代老年代" />
-    <option name="LAST_COMMIT_MESSAGE" value="JVM 新生代老年代" />
+    <MESSAGE value="JVM 参数设置" />
+    <option name="LAST_COMMIT_MESSAGE" value="JVM 参数设置" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
@@ -1113,20 +1088,20 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="FIRST">
-          <first_editor relative-caret-position="10">
-            <caret line="581" selection-start-line="581" selection-end-line="581" selection-end-column="22" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/allst/jcore/jvm/HeapArgs.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="216">
-          <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
+          <caret line="8" selection-start-line="8" selection-end-line="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="FIRST">
+          <first_editor relative-caret-position="100">
+            <caret line="605" column="7" selection-start-line="605" selection-start-column="7" selection-end-line="605" selection-end-column="7" />
+          </first_editor>
+          <second_editor />
         </state>
       </provider>
     </entry>
