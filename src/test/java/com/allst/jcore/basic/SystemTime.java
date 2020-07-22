@@ -1,21 +1,17 @@
 package com.allst.jcore.basic;
 
+import org.junit.Test;
+
 import java.text.SimpleDateFormat;
-import java.time.Clock;
-import java.time.Duration;
-import java.time.Instant;
-import java.time.LocalDate;
-import java.time.LocalDateTime;
+import java.time.*;
 import java.time.format.DateTimeFormatter;
 import java.time.temporal.TemporalAdjusters;
 import java.util.Calendar;
 import java.util.Date;
 
-import org.junit.Test;
-
 public class SystemTime {
 
-	public static void main(String[] args) {
+	/*public static void main(String[] args) {
 		// 获取当前系统时间的毫秒数及其长度
 		long time = System.currentTimeMillis();
 		int len = String.valueOf(time).length();
@@ -33,13 +29,13 @@ public class SystemTime {
 		System.out.println("当前日期为:" + curYear + "-" + curMonth + "-" + day);
 		System.out.println(new SystemTime().getTimeStamp());
 		System.out.println(curDay);
-	}
+	}*/
 
 	/**
 	 * 获取当前时间戳的字符串
 	 * @return
 	 */
-	private String getTimeStamp() {
+	/*private String getTimeStamp() {
 		// 方法 一
 		System.currentTimeMillis();
 		// 方法 二
@@ -48,7 +44,7 @@ public class SystemTime {
 		long stamp = new Date().getTime();
 		String str = String.valueOf(stamp);
 		return str;
-	}
+	}*/
 	
 	/**
 	 * 获取当前时间的：年、月、日、时、分、秒

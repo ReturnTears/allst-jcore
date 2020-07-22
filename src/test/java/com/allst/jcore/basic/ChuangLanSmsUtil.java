@@ -1,18 +1,12 @@
 package com.allst.jcore.basic;
 
-import java.io.BufferedReader;
-import java.io.InputStreamReader;
-import java.io.OutputStream;
-import java.net.HttpURLConnection;
-import java.net.URL;
-
 /**
  * @author June 2019/03/13 下午 03:54
  * @version 1.0
  */
 public class ChuangLanSmsUtil {
     public static String sendSmsByPost(String path, String postContent) {
-        URL url = null;
+        /*URL url = null;
         try {
             url = new URL(path);
             HttpURLConnection httpURLConnection = (HttpURLConnection) url.openConnection();
@@ -31,7 +25,7 @@ public class ChuangLanSmsUtil {
 
             httpURLConnection.connect();
             OutputStream os=httpURLConnection.getOutputStream();
-            os.write(postContent.getBytes("UTF-8"));
+            os.write(postContent.getBytes(StandardCharsets.UTF_8));
             os.flush();
 
             StringBuilder sb = new StringBuilder();
@@ -39,7 +33,7 @@ public class ChuangLanSmsUtil {
             if (httpRspCode == HttpURLConnection.HTTP_OK) {
                 // 开始获取数据
                 BufferedReader br = new BufferedReader(
-                        new InputStreamReader(httpURLConnection.getInputStream(), "utf-8"));
+                        new InputStreamReader(httpURLConnection.getInputStream(), StandardCharsets.UTF_8));
                 String line = null;
                 while ((line = br.readLine()) != null) {
                     sb.append(line);
@@ -52,6 +46,7 @@ public class ChuangLanSmsUtil {
         } catch (Exception e) {
             e.printStackTrace();
         }
+        return null;*/
         return null;
     }
 }
