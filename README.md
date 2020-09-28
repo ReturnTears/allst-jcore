@@ -693,6 +693,17 @@ Class c = Class.forName("java.lang.String");
 
 
 理解CLass类并获取Class实例
+对于每个类而言， JRE为其保留了一个不变的Class类型的对象。
+一个Class对象包含特定某个结构(class/interface/enum/annotation/primitive type/void)的有关信息。
+Class本身也是一个类
+Class对象只能由系统建立对象
+一个加载的类在JVM中智慧有一个Class实例
+一个Class对象对应的是一个加载到JVM中的.class文件
+每个类的实例都会记得自己是由那个Class实例所生成
+通过Class可以完整地得到一个类中的所有被加载的结构
+Class类是Reflection的根源， 针对任何你想动态加载、运行的类，唯有先获得相应的Class对象
+
+
 
 类的加载与ClassLoader
 
