@@ -7,6 +7,7 @@ package com.allst.jcore.entity;
 public class User {
     private String name;
     private int age;
+    public static String address = "China CQ";
 
     public User(String name, int age) {
         this.name = name;

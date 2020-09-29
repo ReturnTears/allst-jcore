@@ -1,5 +1,9 @@
 package com.allst.jcore.anno;
 
+import java.lang.reflect.Constructor;
+import java.lang.reflect.Field;
+import java.lang.reflect.Method;
+
 /**
  * Class类的创建方式
  * @author YiYa
@@ -29,6 +33,55 @@ public class AnnoPratice {
         // 方式5-获取父类类型
         Class<?> c5 = c1.getSuperclass();
         System.out.println(c5);
+
+        /**
+         * 获取类的信息
+         */
+        Class<?> forName = Class.forName("com.allst.jcore.entity.User");
+        System.out.println(forName.getName());// 包名+类名
+        System.out.println(forName.getSimpleName());// 类名
+        Field[] fields = forName.getFields();   // 只能找到public属性
+        for (Field field : fields) {
+            System.out.println(field);
+        }
+        Field[] fields2 = forName.getDeclaredFields(); // 找到全部的属性
+        for (Field field : fields2) {
+            System.out.println(field);
+        }
+
+        try {
+            // 获取指定属性
+            Field name = forName.getDeclaredField("name");
+            System.out.println(name);
+        } catch (NoSuchFieldException e) {
+            e.printStackTrace();
+        }
+        // 获得本类及其父类的全部public方法
+        Method[] methods = forName.getMethods();
+        for (Method method : methods) {
+            System.out.println(method);
+        }
+        // 获得本类的所有方法
+        Method[] declaredMethods = forName.getDeclaredMethods();
+        for (Method declaredMethod : declaredMethods) {
+            System.out.println(declaredMethod);
+        }
+
+        // 获取指定方法
+        try {
+            Method getName = forName.getMethod("getName", null);
+            Method setAge = forName.getMethod("setAge", int.class);
+            System.out.println(getName);
+            System.out.println(setAge);
+        } catch (NoSuchMethodException e) {
+            e.printStackTrace();
+        }
+
+        // 获取构造器
+        Constructor<?>[] constructors = forName.getConstructors();
+        for (Constructor<?> constructor : constructors) {
+            System.out.println(constructor);
+        }
     }
 }
 
