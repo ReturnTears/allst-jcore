@@ -1,7 +1,10 @@
 package com.allst.jcore.anno;
 
+import com.allst.jcore.entity.User;
+
 import java.lang.reflect.Constructor;
 import java.lang.reflect.Field;
+import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 
 /**
@@ -10,7 +13,7 @@ import java.lang.reflect.Method;
  * @since 2020-09-28 下午 11:00
  */
 public class AnnoPratice {
-    public static void main(String[] args) throws ClassNotFoundException {
+    public static void main(String[] args) throws ClassNotFoundException, IllegalAccessException, InstantiationException {
         Work teacher = new Teacher();
         System.out.println(teacher.name + " is a work!");
 
@@ -82,6 +85,42 @@ public class AnnoPratice {
         for (Constructor<?> constructor : constructors) {
             System.out.println(constructor);
         }
+
+        // 构造一个对象：本质上调用了类的午餐构造器，如果没有显示申明的无参构造器，运行则会报错
+        User user = (User) forName.newInstance();
+        System.out.println(user);
+
+        // 通过构造器创建对象, 不用显示申明无参构造器也可以, 把无参构造注释后测试
+        try {
+            Constructor<?> declaredConstructor = forName.getDeclaredConstructor(String.class, int.class);
+            User user1 = (User) declaredConstructor.newInstance("Wahaha", 18);
+            System.out.println(user1);
+        } catch (NoSuchMethodException | InvocationTargetException e) {
+            e.printStackTrace();
+        }
+
+        // 通过反射调用普通方法
+        User user2 = (User) forName.newInstance();
+        try {
+            // 通过反射获取一个方法
+            Method setName = forName.getDeclaredMethod("setName", String.class);
+            // 激活执行
+            setName.invoke(user2, "ZhangSan");
+        } catch (NoSuchMethodException | InvocationTargetException e) {
+            e.printStackTrace();
+        }
+        System.out.println(user2.getName());
+
+        // 通过反射操作属性， 操作属性不能直接操作私有属性
+        User user3 = (User) forName.newInstance();
+        try {
+            Field name = forName.getDeclaredField("name");
+            name.setAccessible(true); // 关闭安全检测
+            name.set(user3, "Lisi");
+        } catch (NoSuchFieldException e) {
+            e.printStackTrace();
+        }
+        System.out.println(user3.getName());
     }
 }
 

@@ -9,6 +9,8 @@ public class User {
     private int age;
     public static String address = "China CQ";
 
+    public User() {}
+
     public User(String name, int age) {
         this.name = name;
         this.age = age;
