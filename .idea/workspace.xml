@@ -16,20 +16,17 @@
         <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
       </path>
     </expand>
-    <select />
+    <select>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a48103bc-3033-486e-9694-fcaa31a9b740" name="Default" comment="Java8在IDEA2020.1环境下的运行修改">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/allst/jcore/webservice/schema/book.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/allst/jcore/webservice/schema/book.xsd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/allst/jcore/webservice/server/WsServer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/allst/jcore/webservice/ws/HelloWS.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/allst/jcore/webservice/ws/HelloWSImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/allst/jcore/webservice/WebServiceTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+    <list default="true" id="a48103bc-3033-486e-9694-fcaa31a9b740" name="Default" comment="webservice">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/allst/jcore/java/JDKDeserialize.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/allst/jcore/_ws_http/GetWeatherByHttp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/allst/jcore/http/GetWeatherByHttp.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -133,7 +130,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1559056314914" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/java/com/allst/jcore/webservice" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/java/com/allst/jcore/java" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
@@ -151,6 +148,7 @@
       <recent name="com.allst.jcore.jvm" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\IdeaProjects\allst-jcore\src\main\java\com\allst\jcore\java" />
       <recent name="E:\IdeaProjects\allst-jcore\src\main\java\com\allst\jcore\webservice" />
       <recent name="E:\IdeaProjects\allst-jcore\src\main\resources" />
       <recent name="E:\IdeaProjects\allst-jcore\src\main\java\com\allst\jcore\basic" />
@@ -163,7 +161,7 @@
       <select />
     </treeState>
   </component>
-  <component name="RunManager" selected="JUnit.WebServiceTest.test">
+  <component name="RunManager" selected="Application.JDKDeserialize">
     <configuration default="true" type="Applet">
       <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
       <method v="2">
@@ -198,24 +196,24 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="CollectorsAction" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.allst.jcore.jv8.collector.CollectorsAction" />
-      <module name="allst-jcore" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.allst.jcore.jv8.collector.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="HeapSpace1" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="com.allst.jcore.jvm.HeapSpace1" />
       <module name="allst-jcore" />
       <option name="VM_PARAMETERS" value="-Xms20m -Xmx20m" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="JDKDeserialize" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.allst.jcore.java.JDKDeserialize" />
+      <module name="allst-jcore" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.allst.jcore.java.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -349,19 +347,19 @@
     </configuration>
     <list>
       <item itemvalue="Application.HeapSpace1" />
-      <item itemvalue="Application.CollectorsAction" />
       <item itemvalue="Application.AllstJv8Date" />
       <item itemvalue="Application.AnnoPratice" />
       <item itemvalue="Application.WsServer" />
       <item itemvalue="JUnit.WebServiceTest.test" />
+      <item itemvalue="Application.JDKDeserialize" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.JDKDeserialize" />
         <item itemvalue="JUnit.WebServiceTest.test" />
         <item itemvalue="Application.WsServer" />
         <item itemvalue="Application.AnnoPratice" />
         <item itemvalue="Application.AllstJv8Date" />
-        <item itemvalue="Application.CollectorsAction" />
       </list>
     </recent_temporary>
   </component>
@@ -460,14 +458,7 @@
       <workItem from="1601388455691" duration="4708000" />
       <workItem from="1602420048689" duration="1199000" />
       <workItem from="1602428612663" duration="68000" />
-      <workItem from="1603207413042" duration="1900000" />
-    </task>
-    <task id="LOCAL-00041" summary="forkjoin">
-      <created>1585842370940</created>
-      <option name="number" value="00041" />
-      <option name="presentableId" value="LOCAL-00041" />
-      <option name="project" value="LOCAL" />
-      <updated>1585842370940</updated>
+      <workItem from="1603207413042" duration="2568000" />
     </task>
     <task id="LOCAL-00042" summary="Spliterator">
       <created>1586270853281</created>
@@ -805,7 +796,14 @@
       <option name="project" value="LOCAL" />
       <updated>1601396690272</updated>
     </task>
-    <option name="localTasksCounter" value="90" />
+    <task id="LOCAL-00090" summary="webservice">
+      <created>1603209528760</created>
+      <option name="number" value="00090" />
+      <option name="presentableId" value="LOCAL-00090" />
+      <option name="project" value="LOCAL" />
+      <updated>1603209528761</updated>
+    </task>
+    <option name="localTasksCounter" value="91" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -842,7 +840,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_CLEANUP_BEFORE_PROJECT_COMMIT" value="true" />
-    <MESSAGE value="Date" />
     <MESSAGE value="Java 基础" />
     <MESSAGE value="JVM 类加载子系统" />
     <MESSAGE value="JVM 类加载子系统-双亲委派机制" />
@@ -867,7 +864,8 @@
     <MESSAGE value="Java8在IDEA2020.1环境下的运行修改" />
     <MESSAGE value="Class" />
     <MESSAGE value="Java注解与反射" />
-    <option name="LAST_COMMIT_MESSAGE" value="Java注解与反射" />
+    <MESSAGE value="webservice" />
+    <option name="LAST_COMMIT_MESSAGE" value="webservice" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
@@ -884,10 +882,10 @@
       <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state x="445" y="361" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog/0.0.1536.864@0.0.1536.864" timestamp="1600789211172" />
-    <state x="293" y="0" key="CommitChangelistDialog2" timestamp="1602428671137">
+    <state x="293" y="0" key="CommitChangelistDialog2" timestamp="1603209526969">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state x="293" y="0" key="CommitChangelistDialog2/0.0.1536.864@0.0.1536.864" timestamp="1602428671137" />
+    <state x="293" y="0" key="CommitChangelistDialog2/0.0.1536.864@0.0.1536.864" timestamp="1603209526969" />
     <state x="161" y="100" width="1200" height="642" key="DiffContextDialog" timestamp="1600874896776">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
@@ -916,10 +914,10 @@
       <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state x="84" y="13" width="1275" height="710" key="SettingsEditor/0.0.1536.864@0.0.1536.864" timestamp="1603209017089" />
-    <state x="361" y="165" key="Vcs.Push.Dialog.v2" timestamp="1601396692725">
+    <state x="361" y="165" key="Vcs.Push.Dialog.v2" timestamp="1603209532136">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state x="361" y="165" key="Vcs.Push.Dialog.v2/0.0.1536.864@0.0.1536.864" timestamp="1601396692725" />
+    <state x="361" y="165" key="Vcs.Push.Dialog.v2/0.0.1536.864@0.0.1536.864" timestamp="1603209532136" />
     <state x="530" y="335" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1602428673397">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
