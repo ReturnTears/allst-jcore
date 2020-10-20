@@ -1,4 +1,4 @@
-package com.allst.jcore._ws_http;
+package com.allst.jcore.http;
 
 /**
  * 通过HTTP获取Weather信息

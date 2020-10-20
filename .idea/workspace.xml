@@ -1,24 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="a48103bc-3033-486e-9694-fcaa31a9b740" name="Default" comment="JVM 方法区">
-      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/jarRepositories.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_alibaba_fastjson_1_2_47.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_alibaba_fastjson_1_2_47.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_sun_mail_javax_mail_1_5_0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_sun_mail_javax_mail_1_5_0.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__commons_logging_commons_logging_1_2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_logging_commons_logging_1_2.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__javax_activation_activation_1_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_activation_activation_1_1.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__javax_javaee_api_7_0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_javaee_api_7_0.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__javax_servlet_servlet_api_2_5.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_servlet_servlet_api_2_5.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__javax_websocket_javax_websocket_api_1_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_websocket_javax_websocket_api_1_1.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__junit_junit_4_12.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__junit_junit_4_12.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_commons_commons_lang3_3_8_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_commons_commons_lang3_3_8_1.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_hamcrest_hamcrest_core_1_3.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hamcrest_hamcrest_core_1_3.xml" afterDir="false" />
+    <list default="true" id="a48103bc-3033-486e-9694-fcaa31a9b740" name="Default" comment="Java8在IDEA2020.1环境下的运行修改">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/allst/jcore/webservice/schema/book.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/allst/jcore/webservice/schema/book.xsd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/allst/jcore/webservice/server/WsServer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/allst/jcore/webservice/ws/HelloWS.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/allst/jcore/webservice/ws/HelloWSImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/allst/jcore/webservice/WebServiceTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/allst/jcore/basic/ChuangLanSmsUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/allst/jcore/basic/ChuangLanSmsUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/allst/jcore/basic/StrSplit.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/allst/jcore/basic/StrSplit.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/allst/jcore/basic/SystemTime.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/allst/jcore/basic/SystemTime.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/allst/jcore/_ws_http/GetWeatherByHttp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/allst/jcore/http/GetWeatherByHttp.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -60,6 +71,13 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="PUSH_TAGS">
       <GitPushTagMode />
+    </option>
+  </component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="hiddenUrls">
+      <set>
+        <option value="https://github.com/ReturnTears/allst-jcore.git" />
+      </set>
     </option>
   </component>
   <component name="MavenImportPreferences">
@@ -115,12 +133,12 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1559056314914" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../appPackage/scala/scala-2.12.6" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/java/com/allst/jcore/webservice" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.31784385" />
-    <property name="settings.editor.selected.configurable" value="reference.settings.project.maven.runner" />
+    <property name="settings.editor.selected.configurable" value="reference.settings.project.maven.importing" />
   </component>
   <component name="RebelAgentSelection">
     <selection>jxr</selection>
@@ -133,6 +151,7 @@
       <recent name="com.allst.jcore.jvm" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\IdeaProjects\allst-jcore\src\main\java\com\allst\jcore\webservice" />
       <recent name="E:\IdeaProjects\allst-jcore\src\main\resources" />
       <recent name="E:\IdeaProjects\allst-jcore\src\main\java\com\allst\jcore\basic" />
       <recent name="E:\IdeaProjects\allst-jcore\src\test\java\com\allst\jcore\basic" />
@@ -144,7 +163,7 @@
       <select />
     </treeState>
   </component>
-  <component name="RunManager" selected="Application.AllstJv8Date">
+  <component name="RunManager" selected="JUnit.WebServiceTest.test">
     <configuration default="true" type="Applet">
       <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
       <method v="2">
@@ -158,6 +177,20 @@
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="com.allst.jcore.jv8.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="AnnoPratice" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.allst.jcore.anno.AnnoPratice" />
+      <module name="allst-jcore" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.allst.jcore.anno.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -179,20 +212,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="HeapArgs" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.allst.jcore.jvm.HeapArgs" />
-      <module name="allst-jcore" />
-      <option name="VM_PARAMETERS" value="-XX:+PrintFlagsInitial" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.allst.jcore.jvm.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="HeapSpace1" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="com.allst.jcore.jvm.HeapSpace1" />
       <module name="allst-jcore" />
@@ -201,27 +220,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="MathDemo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.allst.jcore.basic.MathDemo" />
+    <configuration name="WsServer" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.allst.jcore.webservice.server.WsServer" />
       <module name="allst-jcore" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.allst.jcore.basic.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="TLABArgs" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.allst.jcore.jvm.TLABArgs" />
-      <module name="allst-jcore" />
-      <option name="VM_PARAMETERS" value="-XX:+PrintFlagsInitial" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.allst.jcore.jvm.*" />
+          <option name="PATTERN" value="com.allst.jcore.webservice.server.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -235,11 +240,30 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="WebServiceTest.test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="allst-jcore" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.allst.jcore.webservice.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.allst.jcore.webservice" />
+      <option name="MAIN_CLASS_NAME" value="com.allst.jcore.webservice.WebServiceTest" />
+      <option name="METHOD_NAME" value="test" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+        <option name="BSP.BeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
     <configuration default="true" type="JUnit" factoryName="JUnit">
       <option name="TEST_OBJECT" value="class" />
       <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
       <method v="2">
         <option name="Make" enabled="true" />
+        <option name="BSP.BeforeRunTask" enabled="true" />
       </method>
     </configuration>
     <configuration default="true" type="TestNG">
@@ -325,19 +349,19 @@
     </configuration>
     <list>
       <item itemvalue="Application.HeapSpace1" />
-      <item itemvalue="Application.TLABArgs" />
-      <item itemvalue="Application.HeapArgs" />
-      <item itemvalue="Application.MathDemo" />
       <item itemvalue="Application.CollectorsAction" />
       <item itemvalue="Application.AllstJv8Date" />
+      <item itemvalue="Application.AnnoPratice" />
+      <item itemvalue="Application.WsServer" />
+      <item itemvalue="JUnit.WebServiceTest.test" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.WebServiceTest.test" />
+        <item itemvalue="Application.WsServer" />
+        <item itemvalue="Application.AnnoPratice" />
         <item itemvalue="Application.AllstJv8Date" />
         <item itemvalue="Application.CollectorsAction" />
-        <item itemvalue="Application.MathDemo" />
-        <item itemvalue="Application.HeapArgs" />
-        <item itemvalue="Application.TLABArgs" />
       </list>
     </recent_temporary>
   </component>
@@ -429,42 +453,14 @@
       <workItem from="1594912361181" duration="96000" />
       <workItem from="1594998488410" duration="571000" />
       <workItem from="1595119216529" duration="122000" />
-      <workItem from="1595434822253" duration="1338000" />
-    </task>
-    <task id="LOCAL-00036" summary="collector">
-      <created>1585667940998</created>
-      <option name="number" value="00036" />
-      <option name="presentableId" value="LOCAL-00036" />
-      <option name="project" value="LOCAL" />
-      <updated>1585667940998</updated>
-    </task>
-    <task id="LOCAL-00037" summary="collector">
-      <created>1585747879657</created>
-      <option name="number" value="00037" />
-      <option name="presentableId" value="LOCAL-00037" />
-      <option name="project" value="LOCAL" />
-      <updated>1585747879657</updated>
-    </task>
-    <task id="LOCAL-00038" summary="collector">
-      <created>1585751104704</created>
-      <option name="number" value="00038" />
-      <option name="presentableId" value="LOCAL-00038" />
-      <option name="project" value="LOCAL" />
-      <updated>1585751104704</updated>
-    </task>
-    <task id="LOCAL-00039" summary="自定义collector">
-      <created>1585754156230</created>
-      <option name="number" value="00039" />
-      <option name="presentableId" value="LOCAL-00039" />
-      <option name="project" value="LOCAL" />
-      <updated>1585754156230</updated>
-    </task>
-    <task id="LOCAL-00040" summary="并行parallelStream">
-      <created>1585839938513</created>
-      <option name="number" value="00040" />
-      <option name="presentableId" value="LOCAL-00040" />
-      <option name="project" value="LOCAL" />
-      <updated>1585839938513</updated>
+      <workItem from="1595434822253" duration="1508000" />
+      <workItem from="1600788997363" duration="981000" />
+      <workItem from="1600871191737" duration="3604000" />
+      <workItem from="1601303403948" duration="4050000" />
+      <workItem from="1601388455691" duration="4708000" />
+      <workItem from="1602420048689" duration="1199000" />
+      <workItem from="1602428612663" duration="68000" />
+      <workItem from="1603207413042" duration="1900000" />
     </task>
     <task id="LOCAL-00041" summary="forkjoin">
       <created>1585842370940</created>
@@ -774,17 +770,43 @@
       <option name="project" value="LOCAL" />
       <updated>1594306105137</updated>
     </task>
-    <option name="localTasksCounter" value="85" />
+    <task id="LOCAL-00085" summary="Java8在IDEA2020.1环境下的运行修改">
+      <created>1595436872443</created>
+      <option name="number" value="00085" />
+      <option name="presentableId" value="LOCAL-00085" />
+      <option name="project" value="LOCAL" />
+      <updated>1595436872444</updated>
+    </task>
+    <task id="LOCAL-00086" summary="Java注解与反射">
+      <created>1600874476744</created>
+      <option name="number" value="00086" />
+      <option name="presentableId" value="LOCAL-00086" />
+      <option name="project" value="LOCAL" />
+      <updated>1600874476745</updated>
+    </task>
+    <task id="LOCAL-00087" summary="Class">
+      <created>1601306490158</created>
+      <option name="number" value="00087" />
+      <option name="presentableId" value="LOCAL-00087" />
+      <option name="project" value="LOCAL" />
+      <updated>1601306490160</updated>
+    </task>
+    <task id="LOCAL-00088" summary="Java注解与反射">
+      <created>1601394987020</created>
+      <option name="number" value="00088" />
+      <option name="presentableId" value="LOCAL-00088" />
+      <option name="project" value="LOCAL" />
+      <updated>1601394987022</updated>
+    </task>
+    <task id="LOCAL-00089" summary="Java注解与反射">
+      <created>1601396690272</created>
+      <option name="number" value="00089" />
+      <option name="presentableId" value="LOCAL-00089" />
+      <option name="project" value="LOCAL" />
+      <updated>1601396690272</updated>
+    </task>
+    <option name="localTasksCounter" value="90" />
     <servers />
-  </component>
-  <component name="TodoView">
-    <todo-panel id="selected-file">
-      <is-autoscroll-to-source value="true" />
-    </todo-panel>
-    <todo-panel id="all">
-      <are-packages-shown value="true" />
-      <is-autoscroll-to-source value="true" />
-    </todo-panel>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="2" />
@@ -820,9 +842,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_CLEANUP_BEFORE_PROJECT_COMMIT" value="true" />
-    <MESSAGE value="default method" />
-    <MESSAGE value="Future" />
-    <MESSAGE value="CompletableFuture" />
     <MESSAGE value="Date" />
     <MESSAGE value="Java 基础" />
     <MESSAGE value="JVM 类加载子系统" />
@@ -845,7 +864,10 @@
     <MESSAGE value="JVM 参数设置" />
     <MESSAGE value="JVM 逃逸分析" />
     <MESSAGE value="JVM 方法区" />
-    <option name="LAST_COMMIT_MESSAGE" value="JVM 方法区" />
+    <MESSAGE value="Java8在IDEA2020.1环境下的运行修改" />
+    <MESSAGE value="Class" />
+    <MESSAGE value="Java注解与反射" />
+    <option name="LAST_COMMIT_MESSAGE" value="Java注解与反射" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
@@ -854,41 +876,57 @@
       <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state x="223" y="87" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.864@0.0.1536.864" timestamp="1594912441179" />
-    <state x="293" y="0" key="CommitChangelistDialog2" timestamp="1588868809247">
+    <state x="916" y="122" key="#com.intellij.ide.util.MemberChooser" timestamp="1601305404783">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state x="293" y="0" key="CommitChangelistDialog2/0.0.1536.864@0.0.1536.864" timestamp="1588868809247" />
+    <state x="916" y="122" key="#com.intellij.ide.util.MemberChooser/0.0.1536.864@0.0.1536.864" timestamp="1601305404783" />
+    <state x="445" y="361" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog" timestamp="1600789211172">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state x="445" y="361" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog/0.0.1536.864@0.0.1536.864" timestamp="1600789211172" />
+    <state x="293" y="0" key="CommitChangelistDialog2" timestamp="1602428671137">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state x="293" y="0" key="CommitChangelistDialog2/0.0.1536.864@0.0.1536.864" timestamp="1602428671137" />
+    <state x="161" y="100" width="1200" height="642" key="DiffContextDialog" timestamp="1600874896776">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state x="161" y="100" width="1200" height="642" key="DiffContextDialog/0.0.1536.864@0.0.1536.864" timestamp="1600874896776" />
     <state x="355" y="173" key="FileChooserDialogImpl" timestamp="1595436424497">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state x="355" y="173" key="FileChooserDialogImpl/0.0.1536.864@0.0.1536.864" timestamp="1595436424497" />
-    <state width="1495" height="223" key="GridCell.Tab.0.bottom" timestamp="1595436686117">
+    <state width="1495" height="212" key="GridCell.Tab.0.bottom" timestamp="1603209394533">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state width="1495" height="223" key="GridCell.Tab.0.bottom/0.0.1536.864@0.0.1536.864" timestamp="1595436686117" />
-    <state width="1495" height="223" key="GridCell.Tab.0.center" timestamp="1595436686117">
+    <state width="1495" height="212" key="GridCell.Tab.0.bottom/0.0.1536.864@0.0.1536.864" timestamp="1603209394533" />
+    <state width="1495" height="212" key="GridCell.Tab.0.center" timestamp="1603209394532">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state width="1495" height="223" key="GridCell.Tab.0.center/0.0.1536.864@0.0.1536.864" timestamp="1595436686117" />
-    <state width="1495" height="223" key="GridCell.Tab.0.left" timestamp="1595436686117">
+    <state width="1495" height="212" key="GridCell.Tab.0.center/0.0.1536.864@0.0.1536.864" timestamp="1603209394532" />
+    <state width="1495" height="212" key="GridCell.Tab.0.left" timestamp="1603209394532">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state width="1495" height="223" key="GridCell.Tab.0.left/0.0.1536.864@0.0.1536.864" timestamp="1595436686117" />
-    <state width="1495" height="223" key="GridCell.Tab.0.right" timestamp="1595436686117">
+    <state width="1495" height="212" key="GridCell.Tab.0.left/0.0.1536.864@0.0.1536.864" timestamp="1603209394532" />
+    <state width="1495" height="212" key="GridCell.Tab.0.right" timestamp="1603209394533">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state width="1495" height="223" key="GridCell.Tab.0.right/0.0.1536.864@0.0.1536.864" timestamp="1595436686117" />
-    <state x="84" y="13" width="1275" height="710" key="SettingsEditor" timestamp="1595436446929">
+    <state width="1495" height="212" key="GridCell.Tab.0.right/0.0.1536.864@0.0.1536.864" timestamp="1603209394533" />
+    <state x="84" y="13" width="1275" height="710" key="SettingsEditor" timestamp="1603209017089">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state x="84" y="13" width="1275" height="710" key="SettingsEditor/0.0.1536.864@0.0.1536.864" timestamp="1595436446929" />
-    <state x="361" y="165" key="Vcs.Push.Dialog.v2" timestamp="1588868814945">
+    <state x="84" y="13" width="1275" height="710" key="SettingsEditor/0.0.1536.864@0.0.1536.864" timestamp="1603209017089" />
+    <state x="361" y="165" key="Vcs.Push.Dialog.v2" timestamp="1601396692725">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state x="361" y="165" key="Vcs.Push.Dialog.v2/0.0.1536.864@0.0.1536.864" timestamp="1588868814945" />
-    <state x="537" y="346" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1588868791203">
+    <state x="361" y="165" key="Vcs.Push.Dialog.v2/0.0.1536.864@0.0.1536.864" timestamp="1601396692725" />
+    <state x="530" y="335" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1602428673397">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state x="537" y="346" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1536.864@0.0.1536.864" timestamp="1588868791203" />
+    <state x="530" y="335" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1536.864@0.0.1536.864" timestamp="1602428673397" />
+    <state x="1085" y="185" width="672" height="678" key="search.everywhere.popup" timestamp="1601305923601">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state x="1085" y="185" width="672" height="678" key="search.everywhere.popup/0.0.1536.864@0.0.1536.864" timestamp="1601305923601" />
   </component>
 </project>

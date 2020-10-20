@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" ?> 
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.allstws.cn/bookSchema" elementFormDefault="qualified">
+    <element name="书架">
+        <complexType>
+            <sequence maxOccurs="unbounded">
+                <element name="书">
+                    <complexType>
+                        <sequence>
+                            <element name="书名" type="string" />
+                            <element name="作者" type="string" />
+                            <element name="售价" type="string" />
+                        </sequence>
+                    </complexType>
+                </element>
+            </sequence>
+        </complexType>
+    </element>
+</schema>
+<!-- 
+schema规范：
+    1.所有的标签和属性都需要有schema文件来约束
+    2.所有的schema文件都需要一个id，但在这里以namespace(targetNameSpace),
+    3.namespace的值由什么来指定？由targetNameSpace属性来指定，它的值是一个url（这个路径不一定存在）
+    4.如何引入一个schema约束？属性：xmlns   属性值：对于的schema文件的id(namespace值)
+    5.如果引入的schema不是w3c组织定义，必须指定schema文件的位置
+    6.schema文件的位置由什么属性来指定？属性：schemaLocation，属性值：namespace path
+    7.如果引入n个约束，需要给N-1个取别名，xsi
+ -->
