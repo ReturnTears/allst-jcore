@@ -21,11 +21,11 @@ spring.datasource.url=jdbc:mysql://localhost:3306/dx?characterEncoding=utf-8&use
 spring.datasource.username=root
 spring.datasource.password=123456
 ```
-#一般 java.io.tmpdir 路径就是: C:\Users\June\AppData\Local\Temp\
 
-## Java复习
-### Java基础部分
+# Java复习
+## Java基础部分
 ```text
+一般 java.io.tmpdir 路径就是: C:\Users\June\AppData\Local\Temp\
 🍎 Java 基础
 🥝 抽象类与抽象方法
 🍑 随着继承层次中一个个新子类的定义，类变得越来越具体，而父类则变得更一般，更通用。
@@ -69,7 +69,8 @@ spring.datasource.password=123456
 
 
 ```
-### Java高级部分
+## Java高级部分
+### Java 8
 ```text
 
 🍎 Java 8 基础部分
@@ -741,4 +742,9 @@ jinfo -flag NewRatio pid
 -XX:+PrintGCDetails
 -XX:+EliminateAllocations 开启标量替换，运行将对象打散分配在栈中
 
+```
+
+### Current Looking Url
+```text
+https://www.bilibili.com/video/BV1wh411C7uS?p=2
 ```
