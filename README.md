@@ -734,6 +734,10 @@ Class是Java反射中的一个核心类，它代表了内存中的一个Java类�
 官方网站:
 https://docs.vavr.io/
 https://www.baeldung.com/java-vavr
+https://www.baeldung.com/tag/vavr/
+
+more:
+https://www.baeldung.com/vavr-tutorial
 
 Api列表: 
 https://www.javadoc.io/doc/io.vavr/vavr/0.10.3/index.html
@@ -763,4 +767,5 @@ jinfo -flag NewRatio pid
 ### Current Looking Url
 ```text
 https://www.bilibili.com/video/BV1wh411C7uS?p=2
+https://www.liaoxuefeng.com/wiki/1252599548343744/1265119084411136
 ```
