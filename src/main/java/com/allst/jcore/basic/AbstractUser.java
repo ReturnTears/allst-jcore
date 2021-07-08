@@ -34,16 +34,16 @@ public abstract class AbstractUser {
     public abstract void putUser();
 
     /**
-     * Get User info 具体方法
-     */
-    public void getUser() {
-
-    }
-
-    /**
      * 抽象类中可以包含静态方法
      */
     private static void addUser(){
+        System.out.println("AbstractUser `s addUser methods......");
+    }
 
+    /**
+     * Get User info 具体方法
+     */
+    public void getUser() {
+        System.out.println("AbstractUser `s getUser methods......");
     }
 }
