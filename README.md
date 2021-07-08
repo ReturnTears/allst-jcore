@@ -729,6 +729,22 @@ Class是Java反射中的一个核心类，它代表了内存中的一个Java类�
 
 ```
 
+### Vavr
+```text
+官方网站:
+https://docs.vavr.io/
+https://www.baeldung.com/java-vavr
+
+Api列表: 
+https://www.javadoc.io/doc/io.vavr/vavr/0.10.3/index.html
+
+```
+
+### Guava
+```text
+
+```
+
 ### 备注
 ```text
 Java反编译命令：
