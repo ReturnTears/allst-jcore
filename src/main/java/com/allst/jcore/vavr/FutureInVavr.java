@@ -15,21 +15,26 @@ public class FutureInVavr {
         String initialValue = "Welcome to ";
         Future<String> resultFuture = Future.of(() -> someComputation());
         // 如果需要等待结果，get()方法会阻塞当前线程
-        System.out.println(resultFuture.get());
+        System.out.println("result 1:" + resultFuture.get());
 
         // 推荐使用getOrElse
         String resultValue = resultFuture.getOrElse("Failed to get underlying value.");
-        System.out.println(resultValue);
+        System.out.println("result 2:" + resultValue);
 
         // 一种不同的方法是调用非阻塞getValue()方法，该方法返回一个Option<Try<T>>
         Option<Try<String>> futureOption = resultFuture.getValue();
         Try<String> futureTry = futureOption.get();
         String result = futureTry.get();
-        System.out.println(result);
+        System.out.println("result 3:" + result);
         System.out.println(resultFuture.isEmpty());
     }
 
     private static String someComputation() {
+        try {
+            Thread.sleep(3000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
         return "Hello Vavr ~^~";
     }
 }
