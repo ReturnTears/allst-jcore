@@ -746,6 +746,8 @@ https://www.javadoc.io/doc/io.vavr/vavr/0.10.3/index.html
 
 ### Guava
 ```text
+GuavaCache有两种创建方式：
+CacheLoader 和 Callable callback
 
 ```
 
