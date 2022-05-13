@@ -18,6 +18,9 @@ public class AppTest {
         assertTrue(true);
     }
 
+    /**
+     * toLowerCase方法会新生成一个String对象
+     */
     @Test
     public void test1() {
         System.out.println(func1("JAVA"));

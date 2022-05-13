@@ -1,7 +1,5 @@
 package com.allst.jcore.jv8.stream0;
 
-import sun.management.counter.perf.PerfInstrumentation;
-
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
@@ -97,7 +95,7 @@ public class CreateStream {
 
         private int index = 0;
 
-        private Random random = new Random(System.currentTimeMillis());
+        private final Random random = new Random(System.currentTimeMillis());
 
 
         @Override
