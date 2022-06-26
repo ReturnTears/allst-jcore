@@ -182,6 +182,115 @@ public enum ElementType {
     TYPE_USE // 使用类型的任何地方，JDK 1.8 新增 
 }
 
+元注解 - @Retention & @RetentionTarget
+Reteniton注解的作用是：描述注解保留的时间范围（即：被描述的注解在它所修饰的类中可以被保留到何时） 。
+Reteniton注解用来限定那些被它所注解的注解类在注解到其他类上以后，可被保留到何时，一共有三种策略，定义在RetentionPolicy枚举中。
+public enum RetentionPolicy {
+    SOURCE,    // 源文件保留
+    CLASS,       // 编译期保留，默认值
+    RUNTIME   // 运行期保留，可通过反射去获取注解信息
+}
+通过执行 javap -verbose RetentionTest 命令获取到的RetentionTest 的 class 字节码内容如下
+警告: 文件 .\RetentionTest.class 不包含类 RetentionTest
+Classfile /E:/IdeaProjects/allst-jcore/target/classes/com/allst/jcore/anno/RetentionTest.class
+  Last modified 2022年6月26日; size 680 bytes
+  MD5 checksum 2e916e0909912b0046fe21c328d53297
+  Compiled from "RetentionTest.java"
+public class com.allst.jcore.anno.RetentionTest
+  minor version: 0
+  major version: 55
+  flags: (0x0021) ACC_PUBLIC, ACC_SUPER
+  this_class: #2                          // com/allst/jcore/anno/RetentionTest
+  super_class: #3                         // java/lang/Object
+  interfaces: 0, fields: 0, methods: 4, attributes: 1
+Constant pool:
+   #1 = Methodref          #3.#20         // java/lang/Object."<init>":()V
+   #2 = Class              #21            // com/allst/jcore/anno/RetentionTest
+   #3 = Class              #22            // java/lang/Object
+   #4 = Utf8               <init>
+   #5 = Utf8               ()V
+   #6 = Utf8               Code
+   #7 = Utf8               LineNumberTable
+   #8 = Utf8               LocalVariableTable
+   #9 = Utf8               this
+  #10 = Utf8               Lcom/allst/jcore/anno/RetentionTest;
+  #11 = Utf8               sourcePolicy
+  #12 = Utf8               classPolicy
+  #13 = Utf8               RuntimeInvisibleAnnotations
+  #14 = Utf8               Lcom/allst/jcore/anno/ClassPolicy;
+  #15 = Utf8               runtimePolicy
+  #16 = Utf8               RuntimeVisibleAnnotations
+  #17 = Utf8               Lcom/allst/jcore/anno/RuntimePolicy;
+  #18 = Utf8               SourceFile
+  #19 = Utf8               RetentionTest.java
+  #20 = NameAndType        #4:#5          // "<init>":()V
+  #21 = Utf8               com/allst/jcore/anno/RetentionTest
+  #22 = Utf8               java/lang/Object
+{
+  public com.allst.jcore.anno.RetentionTest();
+    descriptor: ()V
+    flags: (0x0001) ACC_PUBLIC
+    Code:
+      stack=1, locals=1, args_size=1
+         0: aload_0
+         1: invokespecial #1                  // Method java/lang/Object."<init>":()V
+         4: return
+      LineNumberTable:
+        line 7: 0
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0       5     0  this   Lcom/allst/jcore/anno/RetentionTest;
+
+  public void sourcePolicy();
+    descriptor: ()V
+    flags: (0x0001) ACC_PUBLIC
+    Code:
+      stack=0, locals=1, args_size=1
+         0: return
+      LineNumberTable:
+        line 11: 0
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0       1     0  this   Lcom/allst/jcore/anno/RetentionTest;
+
+  public void classPolicy();
+    descriptor: ()V
+    flags: (0x0001) ACC_PUBLIC
+    Code:
+      stack=0, locals=1, args_size=1
+         0: return
+      LineNumberTable:
+        line 15: 0
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0       1     0  this   Lcom/allst/jcore/anno/RetentionTest;
+    RuntimeInvisibleAnnotations:
+      0: #14()
+        com.allst.jcore.anno.ClassPolicy
+
+  public void runtimePolicy();
+    descriptor: ()V
+    flags: (0x0001) ACC_PUBLIC
+    Code:
+      stack=0, locals=1, args_size=1
+         0: return
+      LineNumberTable:
+        line 19: 0
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0       1     0  this   Lcom/allst/jcore/anno/RetentionTest;
+    RuntimeVisibleAnnotations:
+      0: #17()
+        com.allst.jcore.anno.RuntimePolicy
+}
+SourceFile: "RetentionTest.java"
+从RetentionTest的字节码内容我们可以得出以下两点结论：
+1、编译器并没有记录下 sourcePolicy() 方法的注解信息；
+2、编译器分别使用了 RuntimeInvisibleAnnotations 和 RuntimeVisibleAnnotations 属性去记录了classPolicy()方法 和 runtimePolicy()方法 的注解信息；
+
+元注解 - @Documented
+Documented注解的作用是：描述在使用 javadoc 工具为类生成帮助文档时是否要保留其注解信息。
+
 ```
 ## Java高级部分
 ### Java 8
