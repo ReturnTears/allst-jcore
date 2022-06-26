@@ -291,6 +291,10 @@ SourceFile: "RetentionTest.java"
 元注解 - @Documented
 Documented注解的作用是：描述在使用 javadoc 工具为类生成帮助文档时是否要保留其注解信息。
 
+元注解 - @Inherited
+Inherited注解的作用：被它修饰的Annotation将具有继承性。如果某个类使用了被@Inherited修饰的Annotation，则其子类将自动具有该注解。
+
+
 ```
 ## Java高级部分
 ### Java 8
