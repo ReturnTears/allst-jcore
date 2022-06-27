@@ -9,12 +9,8 @@ import java.lang.annotation.Target;
  * @author June
  * @since 2022-06-27
  */
-@Target(ElementType.METHOD)
+// 自定义ElementType.TYPE_PARAMETER注解
 @Retention(RetentionPolicy.RUNTIME)
-public @interface MyMethodAnnotation {
-
-    String title() default "";
-
-    String description() default "";
-
+@Target(ElementType.TYPE_PARAMETER)
+public @interface MyNotEmpty {
 }

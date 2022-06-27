@@ -180,6 +180,7 @@ public enum ElementType {
     TYPE_PARAMETER, // 类型参数，JDK 1.8 新增
  
     TYPE_USE // 使用类型的任何地方，JDK 1.8 新增 
+    (此类型包括类型声明和类型参数声明，是为了方便设计者进行类型检查)包含了ElementType.TYPE(类、接口（包括注解类型）和枚举的声明)和ElementType.TYPE_PARAMETER(类型参数声明),
 }
 
 元注解 - @Retention & @RetentionTarget
@@ -308,6 +309,18 @@ AnnotatedElement 接口是所有程序元素（Class、Method和Constructor）�
 注解的原理：
 注解本质是一个继承了Annotation 的特殊接口，其具体实现类是Java 运行时生成的动态代理类。而我们通过反射获取注解时，返回的是Java 运行时生成的动态代理对象$Proxy1。
 通过代理对象调用自定义注解（接口）的方法，会最终调用AnnotationInvocationHandler 的invoke方法。该方法会从memberValues 这个Map 中索引出对应的值。而memberValues 的来源是Java 常量池。
+
+注解是不支持继承的，不能使用关键字extends来继承某个@interface，但注解在编译后，编译器会自动继承java.lang.annotation.Annotation接口.
+虽然反编译后发现注解继承了Annotation接口，请记住，即使Java的接口可以实现多继承，但定义注解时依然无法使用extends关键字继承@interface。
+区别于注解的继承，被注解的子类继承父类注解可以用@Inherited： 如果某个类使用了被@Inherited修饰的Annotation，则其子类将自动具有该注解。
+
+注解的应用场景：
+1、配置化到注解化 - 框架的演进
+    例： Spring 框架 配置化到注解化的转变
+2、自定义注解和AOP - 通过切面实现解耦
+    例： 最为常见的就是使用Spring AOP切面实现统一的操作日志管理
+    例： 可以看到权限管理也是通过类似的注解（@RequiresPermissions）机制来实现的。所以我们可以看到，通过注解+AOP最终的目标是为了实现模块的解耦。
+
 
 ```
 ## Java高级部分
