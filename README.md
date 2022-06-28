@@ -361,6 +361,68 @@ Exception（异常）
     仅当抛出了异常，该方法的调用者才必须处理或者重新抛出该异常。当方法的调用者无力处理该异常的时候，应该继续抛出，而不是囫囵吞枣。 
     调用方法必须遵循任何可查异常的处理和声明规则。若覆盖一个方法，则不能声明与覆盖方法不同的异常。声明的任何异常必须是被覆盖方法所声明异常的同类或子类。
  异常的抛出(throw)
+    如果代码可能会引发某种错误，可以创建一个合适的异常类实例并抛出它，这就是抛出异常。
+
+异常的自定义
+    习惯上，定义一个异常类应包含两个构造函数，一个无参构造函数和一个带有详细描述信息的构造函数（Throwable 的 toString 方法会打印这些详细信息，调试时很有用）。
+    自定义异常类时，继承Exception类
+    public class DefException extends Exception {
+        public DefException(){ }
+        public DefException(String msg){
+            super(msg);
+        }
+        // ...
+    }
+
+异常的捕获
+    异常捕获处理的方法通常有：
+    try-catch
+    try-catch-finally
+    try-finally
+    try-with-resource
+
+异常基础总结
+    1、try、catch和finally都不能单独使用，只能是try-catch、try-finally或者try-catch-finally。 
+    2、try语句块监控代码，出现异常就停止执行下面的代码，然后将异常移交给catch语句块来处理。 
+    3、finally语句块中的代码一定会被执行，常用于回收资源 。 
+    4、throws：声明一个异常，告知方法调用者。 
+    5、throw ：抛出一个异常，至于该异常被捕获还是继续抛出都与它无关。 
+Java编程思想一书中，对异常的总结。 
+    1、在恰当的级别处理问题。（在知道该如何处理的情况下了捕获异常。） 
+    2、解决问题并且重新调用产生异常的方法。 
+    3、进行少许修补，然后绕过异常发生的地方继续执行。 
+    4、用别的数据进行计算，以代替方法预计会返回的值。 
+    5、把当前运行环境下能做的事尽量做完，然后把相同的异常重抛到更高层。 
+    6、把当前运行环境下能做的事尽量做完，然后把不同的异常抛到更高层。 
+    7、终止程序。 
+    8、进行简化（如果你的异常模式使问题变得太复杂，那么用起来会非常痛苦）。 
+    9、让类库和程序更安全。
+
+常用的异常
+    在Java中提供了一些异常用来描述经常发生的错误，对于这些异常，有的需要程序员进行捕获处理或声明抛出，有的是由Java虚拟机自动进行捕获处理。Java中常见的异常类:
+    RuntimeException：
+        java.lang.ArrayIndexOutOfBoundsException 数组索引越界异常。当对数组的索引值为负数或大于等于数组大小时抛出。
+        java.lang.ArithmeticException 算术条件异常。譬如：整数除零等。
+        java.lang.NullPointerException 空指针异常。当应用试图在要求使用对象的地方使用了null时，抛出该异常。譬如：调用null对象的实例方法、访问null对象的属性、计算null对象的长度、使用throw语句抛出null等等 
+        java.lang.ClassNotFoundException 找不到类异常。当应用试图根据字符串形式的类名构造类，而在遍历CLASSPAH之后找不到对应名称的class文件时，抛出该异常。
+        java.lang.NegativeArraySizeException 数组长度为负异常
+        java.lang.ArrayStoreException 数组中包含不兼容的值抛出的异常
+        java.lang.SecurityException 安全性异常
+        java.lang.IllegalArgumentException 非法参数异常
+    IOException
+        IOException：操作输入流和输出流时可能出现的异常。
+        EOFException 文件已结束异常
+        FileNotFoundException 文件未找到异常
+    其他
+        ClassCastException    类型转换异常类 
+        ArrayStoreException  数组中包含不兼容的值抛出的异常 
+        SQLException   操作数据库异常类 
+        NoSuchFieldException   字段未找到异常 
+        NoSuchMethodException   方法未找到抛出的异常 
+        NumberFormatException    字符串转换为数字抛出的异常 
+        StringIndexOutOfBoundsException 字符串索引超出范围抛出的异常 
+        IllegalAccessException  不允许访问某类异常 
+        InstantiationException  当应用程序试图使用Class类中的newInstance()方法创建一个类的实例，而指定的类对象无法被实例化时，抛出该异常
 ```
 
 ## Java高级部分
