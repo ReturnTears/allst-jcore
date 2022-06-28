@@ -1,7 +1,7 @@
 #Java core技术 II
 
->>day1 2018/04/17
-##part 12 本地方法
+## part 12 本地方法
+```text
 ### 编写本地代码很容易破坏你的程序，并感染系统，因此，只建议在必需的时候才使用本地代码。
 ### 可以使用本地代码的三种情况：
 ###     1、你的应用需要访问的系统特性和设备通过Java平台是无法实现的。
@@ -12,18 +12,20 @@
 
 ##part 5 国际化
 ###
+```
 
 ## MySQL5.7+ 配置
 #MySQl data sources(SpringBoot方式)
-```
+```properties
 spring.datasource.driverClassName=com.mysql.cj.jdbc.Driver
 spring.datasource.url=jdbc:mysql://localhost:3306/dx?characterEncoding=utf-8&useSSL=true&serverTimezone=UTC
 spring.datasource.username=root
 spring.datasource.password=123456
 ```
 
-# Java复习
+# Java
 ## Java基础部分
+### 基础
 ```text
 一般 java.io.tmpdir 路径就是: C:\Users\June\AppData\Local\Temp\
 🍎 Java 基础
@@ -320,9 +322,47 @@ AnnotatedElement 接口是所有程序元素（Class、Method和Constructor）�
 2、自定义注解和AOP - 通过切面实现解耦
     例： 最为常见的就是使用Spring AOP切面实现统一的操作日志管理
     例： 可以看到权限管理也是通过类似的注解（@RequiresPermissions）机制来实现的。所以我们可以看到，通过注解+AOP最终的目标是为了实现模块的解耦。
+    例： https://cloud.tencent.com/developer/article/1522675
 
 
 ```
+
+### 异常
+```text
+Java异常是Java提供的一种识别及响应错误的一致性机制，java异常机制可以使程序中异常处理代码和正常业务代码分离，保证程序代码更加优雅，并提高程序健壮性。
+Throwable 
+    Throwable 是 Java 语言中所有错误与异常的超类。
+    Throwable 包含两个子类：Error（错误）和 Exception（异常），它们通常用于指示发生了异常情况。 
+    Throwable 包含了其线程创建时线程执行堆栈的快照，它提供了 printStackTrace() 等接口用于获取堆栈跟踪数据等信息。
+Error（错误） 
+    Error 类及其子类：程序中无法处理的错误，表示运行应用程序中出现了严重的错误。 
+    此类错误一般表示代码运行时 JVM 出现问题。通常有 Virtual MachineError（虚拟机运行错误）、NoClassDefFoundError（类定义错误）等。比如 OutOfMemoryError：内存不足错误；StackOverflowError：栈溢出错误。此类错误发生时，JVM 将终止线程。
+    这些错误是不受检异常，非代码性错误。因此，当此类错误发生时，应用程序不应该去处理此类错误。按照Java惯例，我们是不应该实现任何新的Error子类的！ 
+Exception（异常）
+    程序本身可以捕获并且可以处理的异常。Exception 这种异常又分为两类：运行时异常和编译时异常。 
+    运行时异常
+        都是RuntimeException类及其子类异常，如NullPointerException(空指针异常)、IndexOutOfBoundsException(下标越界异常)等，这些异常是不检查异常，程序中可以选择捕获处理，也可以不处理。
+        这些异常一般是由程序逻辑错误引起的，程序应该从逻辑角度尽可能避免这类异常的发生。 
+        运行时异常的特点是Java编译器不会检查它，也就是说，当程序中可能出现这类异常，即使没有用try-catch语句捕获它，也没有用throws子句声明抛出它，也会编译通过。 
+    非运行时异常 （编译异常）
+        是RuntimeException以外的异常，类型上都属于Exception类及其子类。从程序语法角度讲是必须进行处理的异常，如果不处理，程序就不能编译通过。如IOException、SQLException等以及用户自定义的Exception异常，一般情况下不自定义检查异常。
+
+可查的异常（checked exceptions）和不可查的异常（unchecked exceptions）
+    可查异常（编译器要求必须处置的异常）： 正确的程序在运行中，很容易出现的、情理可容的异常状况。可查异常虽然是异常状况，但在一定程度上它的发生是可以预计的，而且一旦发生这种异常状况，就必须采取某种方式进行处理。 
+        除了RuntimeException及其子类以外，其他的Exception类及其子类都属于可查异常。这种异常的特点是Java编译器会检查它，也就是说，当程序中可能出现这类异常，要么用try-catch语句捕获它，要么用throws子句声明抛出它，否则编译不会通过。 
+    不可查异常(编译器不要求强制处置的异常) 
+        包括运行时异常（RuntimeException与其子类）和错误（Error）。
+
+异常的申明(throws)
+    1、若是父类的方法没有声明异常，则子类继承方法后，也不能声明异常。
+    
+    Throws抛出异常的规则： 如果是不可查异常（unchecked exception），即Error、RuntimeException或它们的子类，那么可以不使用throws关键字来声明要抛出的异常，编译仍能顺利通过，但在运行时会被系统抛出。 
+    必须声明方法可抛出的任何可查异常（checked exception）。即如果一个方法可能出现受可查异常，要么用try-catch语句捕获，要么用throws子句声明将它抛出，否则会导致编译错误。 
+    仅当抛出了异常，该方法的调用者才必须处理或者重新抛出该异常。当方法的调用者无力处理该异常的时候，应该继续抛出，而不是囫囵吞枣。 
+    调用方法必须遵循任何可查异常的处理和声明规则。若覆盖一个方法，则不能声明与覆盖方法不同的异常。声明的任何异常必须是被覆盖方法所声明异常的同类或子类。
+ 异常的抛出(throw)
+```
+
 ## Java高级部分
 ### Java 8
 ```text
