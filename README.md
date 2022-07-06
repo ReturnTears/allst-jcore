@@ -29,6 +29,8 @@ spring.datasource.password=123456
 ```text
 一般 java.io.tmpdir 路径就是: C:\Users\June\AppData\Local\Temp\
 🍎 Java 基础
+🍎 Java transient关键字用于类属性/变量，表示该类的序列化过程在为该类的任何实例创建持久字节流时应该忽略此类变量。
+
 🥝 抽象类与抽象方法
 🍑 随着继承层次中一个个新子类的定义，类变得越来越具体，而父类则变得更一般，更通用。
    类的设计应该保证父类和子类能够共享特征，有时将一个父类设计得非常抽象，以至于他没有具体得实例， 这样得类叫做抽象类。
@@ -1174,6 +1176,12 @@ Map
 3、HashTable ： 和 HashMap 类似，但它是线程安全的，这意味着同一时刻多个线程可以同时写入 HashTable 并且不会导致数据不一致。它是遗留类，不应该去使用它。
     现在可以使用 ConcurrentHashMap 来支持线程安全，并且 ConcurrentHashMap 的效率会更高，因为 ConcurrentHashMap 引入了分段锁。 
 4、LinkedHashMap 使用双向链表来维护元素的顺序，顺序为插入顺序或者最近最少使用(LRU)顺序。
+```
+
+#### Java集合 - ArrayList源码解析
+```text
+ArrayList实现了List接口，是顺序容器，即元素存放的数据与放进去的顺序相同，允许放入null元素，底层通过数组实现。
+查看：Java集合ArrayList源码.png
 ```
 
 ### 备注
