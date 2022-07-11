@@ -1230,6 +1230,27 @@ LinkedList的实现方式决定了所有跟下标相关的操作都是线性时�
 
 ```
 
+#### Java集合 - Stack和Queue
+```text
+Java里有一个叫做Stack的类，却没有叫做Queue的类(它是个接口名字)。
+当需要使用栈时，Java已不推荐使用Stack，而是推荐使用更高效的ArrayDeque；既然Queue只是一个接口，当需要使用队列时也就首选ArrayDeque了(次选是LinkedList)。
+
+Queue
+Queue接口继承自Collection接口，除了最基本的Collection的方法之外，它还支持额外的insertion, extraction和inspection操作。
+
+Deque
+Deque是"double ended queue", 表示双向的队列，英文读作"deck". Deque 继承自 Queue接口，除了支持Queue的方法之外，还支持insert, remove和examine操作，由于Deque是双向的，所以可以对队列的头和尾都进行操作。
+当把Deque当做FIFO的queue来使用时，元素是从deque的尾部添加，从头部进行删除的； 所以deque的部分方法是和queue是等同的。
+Deque的含义是“double ended queue”，即双端队列，它既可以当作栈使用，也可以当作队列使用。
+
+ArrayDeque和LinkedList是Deque的两个通用实现，由于官方更推荐使用AarryDeque用作栈和队列。
+ArrayDeque底层通过数组实现，为了满足可以同时在数组两端插入或删除元素的需求，该数组还必须是循环的，即循环数组(circular array)，也就是说数组的任何一点都可能被看作起点或者终点。
+ArrayDeque是非线程安全的(not thread-safe)，当多个线程同时使用的时候，需要程序员手动同步；另外，该容器不允许放入null元素。
+head指向首端第一个有效元素，tail指向尾端第一个可以插入元素的空位。因为是循环数组，所以head不一定总等于0，tail也不一定总是比head大。
+
+```
+
+
 ### 备注
 ```text
 Java反编译命令：
