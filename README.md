@@ -1192,6 +1192,44 @@ int newCapacity = oldCapacity + (oldCapacity >> 1);
 查看：Java集合ArrayList源码.png
 ```
 
+#### Java集合 - LinkedList源码解析
+```text
+LinkedList同时实现了List接口和Deque接口，也就是说它既可以看作一个顺序容器，又可以看作一个队列(Queue)，同时又可以看作一个栈(Stack)。
+这样看来LinkedList简直就是个全能冠军。当你需要使用栈或者队列时，可以考虑使用LinkedList，一方面是因为Java官方已经声明不建议使用Stack类，更遗憾的是，
+Java里根本没有一个叫做Queue的类(它是个接口名字)。关于栈或队列，现在的首选是ArrayDeque，它有着比LinkedList(当作栈或队列使用时)有着更好的性能。
+
+LinkedList的实现方式决定了所有跟下标相关的操作都是线性时间，而在首段或者末尾删除元素只需要常数时间。
+为追求效率LinkedList没有实现同步(synchronized)，如果需要多个线程并发访问，可以先采用Collections.synchronizedList()方法对其进行包装。
+
+底层数据结构：
+    LinkedList底层通过双向链表实现。
+    双向链表的每个节点用内部类Node表示。LinkedList通过first和last引用分别指向链表的第一个和最后一个元素。注意这里没有所谓的哑元，当链表为空的时候first和last都指向null。
+    哑元：某个参数如果在子程序或函数中没有用到，那就被称为哑元。
+    transient int size = 0;
+    transient Node<E> first;
+    transient Node<E> last;
+    其中Node:
+            private static class Node<E> {
+                E item;
+                Node<E> next;
+                Node<E> prev;
+        
+                Node(Node<E> prev, E element, Node<E> next) {
+                    this.item = element;
+                    this.next = next;
+                    this.prev = prev;
+                }
+            }
+
+方法介绍：
+1、add(int index, E element)
+因为链表双向的，可以从开始往后找，也可以从结尾往前找，具体朝那个方向找取决于条件：index < (size >> 1)
+
+
+
+
+```
+
 ### 备注
 ```text
 Java反编译命令：
