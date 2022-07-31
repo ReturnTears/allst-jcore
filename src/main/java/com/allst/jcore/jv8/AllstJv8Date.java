@@ -50,6 +50,8 @@ public class AllstJv8Date {
 
         // 打印昨天的当前时刻
         System.out.println(dt.minusDays(1));
+
+        System.out.println(LocalDate.now().toString());
     }
 
     /**
