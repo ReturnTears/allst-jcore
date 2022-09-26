@@ -20,16 +20,16 @@ public class GuavaDelDemo {
                 .removalListener(new RemovalListener<Object, Object>() {
                     @Override
                     public void onRemoval(RemovalNotification<Object, Object> removalNotification) {
-                        System.out.println(removalNotification.getKey() + " : " + removalNotification.getCause());
+                        System.out.println("RemovalNotification > " + removalNotification.getKey() + " : " + removalNotification.getCause());
                     }
                 })
                 .build(new CacheLoader<String, Object>() {
-            // 读取数据
-            @Override
-            public Object load(String key) throws Exception {
-                return Constants.hm.get(key);
-            }
-        });
+                    // 读取数据
+                    @Override
+                    public Object load(String key) throws Exception {
+                        return Constants.hm.get(key);
+                    }
+                });
         // 初始化缓存
         initCache(cache);
 

@@ -22,6 +22,7 @@ public class JavaToVavr {
         // java.util.List 转换为 Vavr List
         java.util.List<String> javaList = Arrays.asList("Java", "Haskell", "Scala");
         List<String> vavrList = List.ofAll(javaList);
+        System.out.println(javaList);
         System.out.println(vavrList);
 
         // java.util.stream 转换为 Vavr stream
