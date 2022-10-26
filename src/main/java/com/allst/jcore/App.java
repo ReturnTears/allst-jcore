@@ -10,5 +10,11 @@ public class App
     public static void main( String[] args )
     {
         System.out.println( "Hello World!" );
+        boolean needCheck = false;
+        if (needCheck) {
+            System.out.println("true");
+        } else {
+            System.out.println("false");
+        }
     }
 }
