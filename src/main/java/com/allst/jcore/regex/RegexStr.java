@@ -11,7 +11,7 @@ import java.util.regex.Pattern;
  */
 public class RegexStr {
     public static void main(String[] args) {
-        String str = "select count(1)   as totalCount, sum  (case when c_check_busi_code is null or c_check_busi_code = '' then 1 else 0 end) as errorCount,   {group} from dgs.t_dq_check_rule_busi where 1  = 1 and {cond} = {value} group by {group}";
+        String str = "select count(1)   as andCount, sum  (case when c_check_busi_code is null or c_check_busi_code = '' then 1 else 0 end) as errorCount,   {group} from dgs.t_dq_check_rule_busi where 1  = 1 and {cond} = {value} group by {group}";
         // ^,*.{group}$
 
         String pattern = "\\w+\\{group}";
@@ -30,5 +30,13 @@ public class RegexStr {
 
         String replace = StringUtils.replace(replaceAll, ", {group}", "");
         System.out.println("replace : " + replace);
+
+        String replaceAnd = str.replaceAll("\\s+and\\s+", " AND ");
+        System.out.println("replaceAnd : " + replaceAnd);
+
+        if (StringUtils.contains(str, "group by")) {
+            String replaceGroupBy = str.replaceAll("group\\s+by", StringUtils.upperCase("group by"));
+            System.out.println("replaceGroupBy : " + replaceGroupBy);
+        }
     }
 }
