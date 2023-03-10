@@ -1,5 +1,7 @@
 package com.allst.jcore.util;
 
+import cn.hutool.core.lang.Pair;
+import cn.hutool.core.util.ObjectUtil;
 import com.google.common.collect.Lists;
 import org.apache.commons.lang3.StringUtils;
 
@@ -144,13 +146,63 @@ public class IndiUtils {
         return sb.substring(0, sb.length() - 1);
     }
 
+    private static String ss = "";
+
+    public static List<Pair<String, String>> combine2Element(List<String> list) {
+        List<Pair<String, String>> resultList = Lists.newArrayListWithExpectedSize(list.size() * list.size() / 2);
+        if (ObjectUtil.isEmpty(list)) {
+            return null;
+        }
+        if (list.size() >= 2) {
+            for (int j = 0; j < list.size(); j++) {
+                resultList.addAll(ll(list.subList(j, list.size())));
+            }
+        }
+        return resultList;
+    }
+
+    public static List<Pair<String, String>> ll(List<String> list) {
+        List<Pair<String, String>> resultList = Lists.newArrayListWithExpectedSize(list.size() * list.size() / 2);
+        for (int j = 1; j < list.size(); j++) {
+            resultList.add(new Pair<>(list.get(0), list.get(j)));
+        }
+        return resultList;
+    }
+
     public static void main(String[] args) {
         /*List<String> usedStrings = Lists.newArrayList("1", "2", "6", "7", "8", "a", "b", "c", "d", "h","j","z");
         String str = handleString(9, usedStrings);
         System.out.println("Result : " + str);*/
 
-        List<Integer> usedNumbers = Lists.newArrayList(1, 2, 6, 7, 8, 100, 190, 203, 400, 500,700,888);
+        /*List<Integer> usedNumbers = Lists.newArrayList(1, 2, 6, 7, 8, 100, 190, 203, 400, 500, 700, 888);
         String str = handleNumeric(999, usedNumbers);
-        System.out.println("Result : " + str);
+        System.out.println("Result : " + str);*/
+
+        /*List<String> usedStrings = Lists.newArrayList("1", "2", "6", "7", "8", "a", "b", "c", "d", "h","j","z");
+        List<Pair<String, String>> pairs = combine2Element(usedStrings);
+        System.out.println("Result : " + pairs);*/
+
+        int[] s = {4, 2, 1, 3, 0, 5};
+
+        String tmp = "";
+        for (int i = 1; i < s.length - 1; i++) {
+            tmp = tmp + s[i];
+        }
+
+        String str = tmp;
+        int length = 2;
+        printAll(str, length, "");
+        System.out.println(ss);
+    }
+
+    private static void printAll(String number, int length, String s2) {
+        if (s2.length() == length) {
+            ss = ss + s2 + ",";
+            System.out.println(s2 + " ");
+        } else {
+            for (int i = 0; i < number.length(); i++) {
+                printAll(new StringBuffer(number).substring(i + 1), length, s2 + number.charAt(i));
+            }
+        }
     }
 }
