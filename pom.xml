@@ -54,7 +54,7 @@
         <dependency>
             <groupId>cn.hutool</groupId>
             <artifactId>hutool-all</artifactId>
-            <version>5.8.5</version>
+            <version>5.8.15</version>
         </dependency>
 
         <!-- websocket client -->
@@ -73,13 +73,13 @@
         <dependency>
             <groupId>io.vavr</groupId>
             <artifactId>vavr</artifactId>
-            <version>0.10.3</version>
+            <version>0.10.4</version>
         </dependency>
         <!-- Google guava -->
         <dependency>
             <groupId>com.google.guava</groupId>
             <artifactId>guava</artifactId>
-            <version>30.1.1-jre</version>
+            <version>31.1-jre</version>
         </dependency>
         <!-- antlr4 -->
         <dependency>
