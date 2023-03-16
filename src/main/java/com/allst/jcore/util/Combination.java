@@ -2,11 +2,10 @@ package com.allst.jcore.util;
 
 import cn.hutool.core.util.StrUtil;
 import com.google.common.collect.Lists;
+import com.google.common.collect.Sets;
+import org.apache.commons.lang3.StringUtils;
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.Iterator;
-import java.util.List;
+import java.util.*;
 import java.util.stream.Collectors;
 
 /**
@@ -65,9 +64,37 @@ public class Combination {
         return combiner(elements, num, result);
     }
 
+    public static void Permutation(String[] s, int from, int to, Set<String> result) {
+        if (to < 1)
+            return;
+        if (to == 1) {
+            swap(s, 0, 1);
+            //System.out.println(StringUtils.join(s, StrUtil.COMMA));
+            result.add(StringUtils.join(s, StrUtil.COMMA));
+        }
+        if (from == to) {
+            // System.out.println(StringUtils.join(s, StrUtil.COMMA));
+            result.add(StringUtils.join(s, StrUtil.COMMA));
+        } else {
+            for (int i = from; i <= to; i++) {
+                swap(s, i, from);
+                Permutation(s, from + 1, to, result);
+                swap(s, from, i);
+            }
+        }
+    }
+
+    public static void swap(String[] s, int i, int j) {
+        String temp = s[i];
+        s[i] = s[j];
+        s[j] = temp;
+    }
+
+
     // 验证
     public static void main(String[] args) {
         List<String> list = Lists.newArrayList("a", "b", "c", "d", "e", "f");
+        System.out.println(list.contains("c"));
         // 从list中每次取三个元素
         List<List<String>> result = findSort(list, 2);
         List<String> collect = result.stream().map(x -> StrUtil.join(",", x)).collect(Collectors.toList());
@@ -78,6 +105,15 @@ public class Combination {
             }
             System.out.println();
         }*/
+        Set<String> sets = Sets.newHashSet();
+        for (String s : collect) {
+            // String[] param = { "a", "b", "c", "d", "e", "f" };
+            String[] param = s.split(",");
+            Permutation(param, 0, param.length - 1, sets);
+        }
+        ArrayList<String> arrayList = Lists.newArrayList(sets);
+        System.out.println(sets);
+        System.out.println(arrayList);
     }
 
 }
