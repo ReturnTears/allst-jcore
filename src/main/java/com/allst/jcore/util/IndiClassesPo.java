@@ -1,5 +1,7 @@
 package com.allst.jcore.util;
 
+import java.util.List;
+
 /**
  * @author Hutu
  * @since 2023-03-26 下午 08:23
@@ -10,6 +12,7 @@ public class IndiClassesPo {
     private String classesLevel;
     private String parentId;
     private String parentName;
+    private List<IndiClassesPo> childList;
 
     public IndiClassesPo() {
     }
@@ -76,6 +79,14 @@ public class IndiClassesPo {
 
     public void setParentName(String parentName) {
         this.parentName = parentName;
+    }
+
+    public List<IndiClassesPo> getChildList() {
+        return childList;
+    }
+
+    public void setChildList(List<IndiClassesPo> childList) {
+        this.childList = childList;
     }
 
     @Override

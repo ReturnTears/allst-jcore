@@ -1,12 +1,14 @@
 package com.allst.jcore.util;
 
 import cn.hutool.core.util.ObjectUtil;
+import cn.hutool.json.JSONUtil;
 import com.google.common.collect.Lists;
 import com.google.common.collect.Maps;
 import org.apache.commons.lang3.StringUtils;
 
 import java.util.List;
 import java.util.Map;
+import java.util.Objects;
 import java.util.stream.Collectors;
 
 /**
@@ -17,6 +19,7 @@ public class IndiClassesMain {
 
     private static Map<String, IndiClassesPo> existMaps;
     private static Map<String, IndiClassesPo> inputMaps = Maps.newHashMap();
+    private static Map<String, Long> nameCount = Maps.newHashMap();
     private static int count = 100;
 
     public static void main(String[] args) {
@@ -24,6 +27,13 @@ public class IndiClassesMain {
         List<IndiClassesPo> existLists = existPo();
         existMaps = existLists.stream().collect(Collectors.toMap(IndiClassesPo::getClassesName, x -> x, (key1, key2) -> key2)); // Function.identity()
         // System.out.println(existMaps.get("classes-1").toString());
+
+        // getParent(existLists);
+        IndiClassesPo parent = getParent(existLists, "116");
+        System.out.println("parent : " + parent);
+
+        nameCount = existLists.stream().collect(Collectors.groupingBy(IndiClassesPo::getClassesName, Collectors.counting()));
+        // System.out.println("nameCount :" + nameCount);
 
         // 模拟导入的数据
         List<IndiClassesPo> importLists = importPo();
@@ -39,7 +49,7 @@ public class IndiClassesMain {
             // 新增的父节点,默认将子节点都增加到当前节点下
             String parentName = po.getParentName();
             if (StringUtils.isEmpty(parentName) && existMaps.containsKey(parentName)) {
-                po.setParentId(existMaps.get(parentName).getClassesId());
+                // po.setParentId(existMaps.get(parentName).getClassesId());
             }
             result.add(po);
         }
@@ -102,11 +112,22 @@ public class IndiClassesMain {
         IndiClassesPo po11 = IndiClassesPo.of("11", "classes-11", "2", "1");
         IndiClassesPo po12 = IndiClassesPo.of("12", "classes-12", "2", "1");
         IndiClassesPo po13 = IndiClassesPo.of("13", "classes-13", "2", "1");
+        IndiClassesPo po111 = IndiClassesPo.of("111", "classes-a", "3", "11");
+        IndiClassesPo po112 = IndiClassesPo.of("112", "classes-a", "3", "12");
+        IndiClassesPo po113 = IndiClassesPo.of("113", "classes-a", "3", "13");
+        IndiClassesPo po114 = IndiClassesPo.of("114", "classes-b", "4", "113");
+        IndiClassesPo po115 = IndiClassesPo.of("115", "classes-c", "5", "114");
+        IndiClassesPo po116 = IndiClassesPo.of("116", "classes-d", "6", "115");
         pos.add(po);
         pos.add(po11);
         pos.add(po12);
         pos.add(po13);
-
+        pos.add(po111);
+        pos.add(po112);
+        pos.add(po113);
+        pos.add(po114);
+        pos.add(po115);
+        pos.add(po116);
 
         return pos;
     }
@@ -129,5 +150,32 @@ public class IndiClassesMain {
         pos.add(po4);
 
         return pos;
+    }
+
+    private static IndiClassesPo getParent(List<IndiClassesPo> existing, String key) {
+        for (IndiClassesPo po : existing) {
+            if (StringUtils.equals(po.getClassesId(), key)) {
+                getParent(existing, po.getParentId());
+            } else {
+                return po;
+            }
+        }
+        return null;
+    }
+
+    private static void getParent(List<IndiClassesPo> existing) {
+        List<IndiClassesPo> collect = existing.stream().filter(x -> x.getParentId().equals("00")).map(m -> {
+            m.setChildList(getChildren(m, existing));
+            return m;
+        }).collect(Collectors.toList());
+
+        System.out.println("collect : " + JSONUtil.toJsonStr(collect));
+    }
+
+    private static List<IndiClassesPo> getChildren(IndiClassesPo root, List<IndiClassesPo> all) {
+        return all.stream().filter(m -> Objects.equals(m.getParentId(), root.getClassesId())).map(m -> {
+            m.setChildList(getChildren(m, all));
+            return m;
+        }).collect(Collectors.toList());
     }
 }
