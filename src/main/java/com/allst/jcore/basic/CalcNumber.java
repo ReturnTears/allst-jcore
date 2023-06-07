@@ -71,7 +71,7 @@ public class CalcNumber {
         }
 
         String str = sb.substring(0, sb.length() - 1);
-        // System.out.println("str = " + str);
+        System.out.println("str = " + str);
         return str;
     }
 

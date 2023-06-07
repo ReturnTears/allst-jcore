@@ -19,5 +19,10 @@ public class IfDemo {
         if (num > 10) {
             System.out.println("num > 10");
         }
+        if (num > 7) {
+            System.out.println("num > 7");
+        } else if (num > 9) {
+            System.out.println("num > 9");
+        }
     }
 }
