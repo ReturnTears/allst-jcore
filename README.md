@@ -1292,13 +1292,60 @@ head指向首端第一个有效元素，tail指向尾端第一个可以插入元
 Java反编译命令：
 javap -verbose xxx.class
 javap -v xxx.class
-jstat -gc pid 
-jinfo -flag NewRatio pid 
--Xmx1G 
--Xms1G 
+jstat -gc pid
+
+jinfo -flag NewRatio pid    // jinfo[1]命令行工具可查看某个Java进程当前虚拟机栈的大小
+jinfo -flag ThreadStackSize pid    // jinfo[1]命令行工具可查看某个Java进程当前虚拟机栈的大小
+-Xss 256K                   // 设置虚拟机栈大小
+-Xmx1G                      // -Xmx 用于设置 JVM 堆内存的最大可用空间
+-Xms1G                      // -Xms 用于设置 JVM 启动时分配的初始堆内存大小
 -XX:+DoEscapeAnalysis 开启逃逸分析 
 -XX:+PrintGCDetails
 -XX:+EliminateAllocations 开启标量替换，运行将对象打散分配在栈中
+
+Linux查看java进程开启的线程数量：
+1、top -H -p {pid}
+2、ps huH p  {pid}  | wc -l
+
+lsof -i:端口号
+用于查看某一端口的占用情况
+lsof -i:5000：查看5000端口占用
+常用命令：
+lsof abc.txt：显示开启文件abc.txt的进程
+lsof -c abc：显示abc进程现在打开的文件
+lsof -c -p 1234：列出进程号为1234的进程所打开的文件
+lsof -g gid：显示归属gid的进程情况
+lsof +d /usr/local/：显示目录下被进程开启的文件
+lsof +D /usr/local/：同上，但是会搜索目录下的目录，时间较长
+lsof -d 4：显示使用fd为4的进程
+lsof -i -U：显示所有打开的端口和UNIX domain文件
+
+netstat命令是一个监控TCP/IP网络的非常有用的工具，它可以显示路由表、实际的网络连接以及每一个网络接口设备的状态信息。
+netstat命令各个参数说明如下：
+-a : 显示所有连线中的Socket
+-t : 指明显示TCP端口
+-u : 指明显示UDP端口
+-l : 仅显示监听套接字(所谓套接字就是使应用程序能够读写与收发通讯协议(protocol)与资料的程序)
+-p : 显示进程标识符和程序名称，每一个套接字/端口都属于一个程序。
+-n : 不进行DNS轮询，显示IP(可以加速操作)
+常用命令：
+netstat -ntlp   //查看当前所有tcp端口占用情况
+netstat -ntulp | grep 80   //查看所有80端口使用情况
+netstat -ntulp | grep 5000   //查看5000端口使用情况
+netstat -anp //查看端口的连接客户端IP
+netstat -anp |grep 5000 //查看5000端口的连接客户端IP
+
+netstat -tunlp 命令
+查看所有端口占用情况：
+sudo netstat -tunlp
+查看指定端口占用情况：
+netstat -tunlp |grep 端口号
+
+netstat -anp 命令
+查看所有端口占用情况：
+sudo netstat -anp
+查看指定端口占用情况：
+netstat -anp |grep 端口号
 
 ```
 
