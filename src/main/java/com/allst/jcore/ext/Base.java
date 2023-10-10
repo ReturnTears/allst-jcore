@@ -26,4 +26,8 @@ public class Base {
         this.currentStep = 2;
         step2();
     }
+
+    public final void test() {
+        System.out.println("不能被重写....");
+    }
 }
