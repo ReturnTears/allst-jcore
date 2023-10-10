@@ -16,4 +16,14 @@ public class Base {
         System.out.println("Base_int_long");
         return a + b;
     }
+
+    protected int currentStep;
+    protected void step1() {}
+    protected void step2() {}
+    protected void action() {
+        this.currentStep = 1;
+        step1();
+        this.currentStep = 2;
+        step2();
+    }
 }

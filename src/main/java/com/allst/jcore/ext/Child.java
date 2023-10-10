@@ -16,4 +16,12 @@ public class Child extends Base {
         System.out.println("Child_int_long");
         return a + b;
     }
+
+    protected void step1() {
+        System.out.println("child step : " + this.currentStep);
+    }
+
+    protected void step2() {
+        System.out.println("child step : " + this.currentStep);
+    }
 }
