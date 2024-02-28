@@ -40,7 +40,7 @@ public class JavaCallJs {
                 System.out.println("运算结果：" + result.intValue());
             }
         }*/
-        engine.eval(new FileReader("e:/TestData/Destop/model.js"));
+        engine.eval(new FileReader("E:/IdeaProjects/allst-jcore/src/main/resources/model.js"));
         //是否可调用方法
         if (engine instanceof Invocable) {
             Invocable in = (Invocable) engine;
