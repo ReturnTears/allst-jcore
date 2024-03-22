@@ -1,6 +1,7 @@
 package com.allst.jcore.jv8;
 
 import java.awt.event.ActionListener;
+import java.util.function.BinaryOperator;
 
 /**
  * Java8函数式编程:Lambda表达式
@@ -15,6 +16,7 @@ public class AllstJv8Lambda {
          * 实现了Runnable 接口，该接口也只有一个run 方法，没有参数，且返回类型为void。
          */
         Runnable noArg = () -> System.err.println("Hello Lambda.");
+        noArg.run();
 
         /**
          * Lambda 表达式的主体不仅可以是一个表达式，而且也可以是一段代码块，
@@ -30,13 +32,21 @@ public class AllstJv8Lambda {
             System.out.println("Hello");
             System.out.println("World");
         };
+        multiArg.run();
 
-        System.out.println(noArg);
+        //System.out.println(noArg);
 
         JavaEightLambda noArgs = (msg) -> System.out.println(msg);
         noArgs.printLambda("yangyang");
 
         JavaEightMulti mutliArg = (x, y) -> x + y;
+        System.out.println(mutliArg.printMulti(1, 2));
+
+        BinaryOperator<Long> add = Long::sum;
+        BinaryOperator<Long> addExplicit = (Long x, Long y) -> x + y;
+        System.out.println(add.apply(1L, 2L));
+        Long apply = addExplicit.apply(2L, 3L);
+        System.out.println(apply);
     }
 
     interface JavaEightLambda {
